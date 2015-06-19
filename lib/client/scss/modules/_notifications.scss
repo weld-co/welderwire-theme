@@ -8,7 +8,12 @@
 }
 
 a.mark-as-read {
-  color: white;
+  width: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: left;
 }
 
 .notification-item {
@@ -19,15 +24,17 @@ a.mark-as-read {
   }
 }
 
-.notification-html {
-  a {
-    display: inline;
-    text-decoration: underline;
-  }
+.notification-html p {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.notification-html a {
+  text-transform: capitalize;
 }
 
 .notification-timestamp {
-  color: $middle-grey;
+  color: $primary-color;
   font-size: 12px;
   margin-bottom: 5px;
   text-transform: capitalize;

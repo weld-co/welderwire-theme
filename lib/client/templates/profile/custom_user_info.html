@@ -56,8 +56,11 @@
             {{/if}}
           {{/if}}
         </div>
-
+        {{#if hasDefaultProfileBackground}}
         <span class="profile-background" style="background-image: url(http://www.gravatar.com/avatar/{{telescope.emailHash}}?d={{getSetting "defaultProfileBackground"}})"></span>
+        {{else}}
+        <span class="profile-background" style="background-image: url(http://www.gravatar.com/avatar/{{telescope.emailHash}}?d=http%3A%2F%2Fwelderwire.co%2Fpackages%2Ftelescope-theme-weld%2Fimg%2Fprofile-default-background.jpg)"></span>
+        {{/if}}
       </div>
 
       <div class="profile-links row center">

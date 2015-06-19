@@ -200,6 +200,7 @@ Package.onUse(function (api) {
     'lib/server/js/weld_members_publication.js',
     'lib/server/js/weld_userstatus_publication.js',
     'lib/server/templates/custom_emailWrapper.handlebars',
+    'lib/server/templates/custom_emailPostItem.handlebars',
     'lib/server/templates/custom_emailDigest.handlebars',
     'lib/server/templates/custom_emailNewPost.handlebars',
     'lib/server/templates/custom_emailNewUser.handlebars',

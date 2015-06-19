@@ -11,43 +11,57 @@
         .ReadMsgBody { width: 100%; background-color: #ebebeb;}
         .ExternalClass {width: 100%; background-color: #ebebeb;}
         .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
-        body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
-        body {margin:0; padding:0;}
-        table {border-spacing:0;}
-        table td {border-collapse:collapse;}
-        .yshortcuts a {border-bottom: none !important;}
 
-
-        /* Constrain email width for small screens */
-        @media screen and (max-width: 600px) {
-            table[class="container"] {
-                width: 95% !important;
-            }
-            .main-container{
-              font-size: 14px !important;
-            }
+        body {
+          -webkit-text-size-adjust: none;
+          -ms-text-size-adjust: none;
+          margin: 0;
+          padding: 0;
         }
 
-        /* Give content more room on mobile */
-        @media screen and (max-width: 480px) {
-            td[class="container-padding"] {
-                padding-left: 12px !important;
-                padding-right: 12px !important;
-            }
+        table {
+          border-spacing: 0;
         }
+
+        table td {
+          border-collapse: collapse;
+        }
+
+        .yshortcuts a {
+          border-bottom: none !important;
+        }
+
         a {
           color: {{accentColor}};
           font-weight: bold;
           text-decoration: none;
         }
-        .wrapper{
-          padding: 20px 0;
+
+        .wrapper {
+          padding: 20px;
         }
+
+        .container {
+          border-radius: 3px;
+          max-width: 600px;
+        }
+
         .heading-container {
-          padding: 40px 0 10px 0;
+          padding: 20px;
           text-align: center;
-          background: {{headerColor}};
+          color: white;
+          background-color: {{accentColor}};
         }
+
+        .heading-container a {
+          text-align: center;
+          color: white;
+          font-family: "Avenir Next", "Avenir", Helvetica, sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          letter-spacing: 3px;
+        }
+
         .heading-container,
         .logo {
           text-align: center;
@@ -56,23 +70,25 @@
           font-weight: bold;
           font-size: 20px;
         }
+
         .main-container {
           line-height: 1.5;
           background: white;
-          padding: 0 30px;
+          padding: 30px;
           font-size: 15px;
           font-family: "Avenir Next", "Avenir", Helvetica, sans-serif;
           font-weight: 500;
           color: #555;
         }
+
         .heading {
           font-weight: bold;
           font-size: 18px;
           line-height: 1.5;
           margin: 0;
-          text-align: center;
           display: block;
         }
+
         .footer-container {
           background-color: #ebebeb;
           text-decoration: underline;
@@ -80,7 +96,7 @@
           padding: 30px;
           font-size: 13px;
           text-align: center;
-          color: {{accentColor}};
+          color: {{buttonColor}};
         }
 
         .post-thumbnail {
@@ -88,12 +104,14 @@
           border-radius: 3px;
           margin-bottom: 20px;
         }
-        .post-body, .comment-body{
+
+        .post-body,
+        .comment-body {
           border-top: 1px solid #ddd;
           border-bottom: 1px solid #ddd;
           padding: 10px 0;
-          margin-bottom: 50px;
         }
+
         .post-body img,
         .post-body-excerpt img {
           max-width: 600px;
@@ -112,7 +130,6 @@
           font-weight: bold;
           display: block;
           line-height: 1.2;
-          text-align: center;
         }
 
         .button {
@@ -122,7 +139,6 @@
           display: block;
           font-family: "Avenir", Helvetica, sans-serif;
           font-weight: bold;
-          margin-bottom: 50px;
           padding: 20px 0;
           text-align: center;
           text-decoration: none;
@@ -133,18 +149,14 @@
           text-align: center;
         }
 
-        .margin-b {
-          margin-bottom: 2rem;
-        }
-
         .notification-type {
           color: #777;
           display: block;
           font-family: "Avenir", Helvetica, sans-serif;
-          margin-bottom: 30px;
-          text-align: center;
+          margin: 15px 0;
         }
     </style>
+
 </head>
 <body style="margin:0; padding:10px 0;" bgcolor="#ebebeb" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
@@ -156,17 +168,20 @@
     <td class="wrapper" align="center" valign="top" bgcolor="#ebebeb" style="background-color: #ebebeb;">
 
       <!-- 600px container (white background) -->
-      <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
+      <table border="0" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
         <tr>
           <td class="heading-container">
             <a href="{{siteUrl}}">
-              <img class="logo" src="http://welderwire.co/packages/telescope-theme-weld/img/favicon.ico" height="16px" width="16px" alt="{{siteName}}"/>
+              {{#if logoUrl}}
+                <img class="logo" src="{{logoUrl}}" alt="{{siteName}}"/>
+              {{else}}
+                {{siteName}}
+              {{/if}}
             </a>
           </td>
         </tr>
         <tr>
           <td class="main-container container-padding" bgcolor="#ffffff">
-            <br>
 
             {{{body}}}
 
@@ -185,7 +200,5 @@
   </tr>
 </table>
 <!--/100% wrapper-->
-<br>
-<br>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <template name="custom_search">
   {{#if hasSearch}}
   <form class="search {{searchQueryEmpty}}">
-    <input type="search" id="search" class="search-field" value="{{searchQuery}}" placeholder="{{_ 'search'}}">
+    <input type="search" id="search" data-js="search" class="custom-search-field" value="{{searchQuery}}" placeholder="{{_ 'search'}}">
   </form>
   {{/if}}
 </template>

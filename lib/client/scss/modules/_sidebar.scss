@@ -116,6 +116,14 @@
   }
 }
 
+.menu-item a {
+  font-size: inherit;
+}
+
+.menu-label {
+  display: inherit;
+}
+
 .menu-description {
   display: none;
   position: absolute;
@@ -125,7 +133,7 @@
   font-size: small;
   left: 0;
   height: 1.5rem;
-  line-height: 1.5;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -162,7 +170,6 @@
 /*====================================================
     Hidden Elements
 ====================================================*/
-
 
 .menu-top-level,
 .show-more {

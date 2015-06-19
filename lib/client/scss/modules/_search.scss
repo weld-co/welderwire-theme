@@ -1,4 +1,4 @@
-input[type="search"].search-field {
+input[type="search"].custom-search-field {
   -webkit-appearance: none;
   border-radius: 0;
   border: none;
@@ -16,7 +16,7 @@ input[type="search"].search-field {
   background-size: 14px;
   border-bottom: 1px solid $lightest-grey;
 
-  transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out,;
 
   &::-webkit-search-cancel-button {
     -webkit-appearance: none;
