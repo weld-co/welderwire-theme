@@ -81,6 +81,7 @@ Package.onUse(function (api) {
     'lib/client/scss/main.scss',
 
     // Common
+    'lib/client/templates/common/custom_main.html',
     'lib/client/templates/common/custom_layout.html',
     'lib/client/templates/common/custom_nav.html',
     'lib/client/templates/common/custom_loading.html',
