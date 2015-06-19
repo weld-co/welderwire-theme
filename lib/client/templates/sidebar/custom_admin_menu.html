@@ -1,0 +1,10 @@
+<template name="custom_admin_menu">
+  {{#if isAdmin}}
+    <li class="dropdown">
+      <span class="dropdown-top-level" href="/">{{_ "admin"}}</span>
+      <div class="dropdown-menu">
+        {{> menuComponent menuName="admin" menuMode="list" menuItems=adminMenuItems}}
+      </div>
+    </li>
+  {{/if}}
+</template>

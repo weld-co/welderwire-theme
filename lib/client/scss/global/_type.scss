@@ -1,0 +1,68 @@
+$sans-font: "Avenir Next", Helvetica, Arial, sans-serif;
+$base-font-family: $sans-font;
+$base-font-size: 0.875rem;
+$base-font-weight: 300;
+$base-line-height: 1.6;
+$base-font: $base-font-weight $base-font-size $sans-font;
+
+::selection {
+  background: $primary-color;
+  color: white;
+}
+
+html, body, input, button {
+  font-family: $base-font-family;
+  -webkit-font-smoothing: subpixel-antialiased;
+  @include small {
+    font-weight: 500;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 50ms ease;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+h1, h2, h3, h4, h5, ul, ol, li, p, pre { line-height: 1.2; }
+
+h1, h2, h3, h4, h5 { margin-bottom: 2rem;}
+
+h1 { font-size: 38px; }
+
+h2 { font-size: 24px; }
+
+h3 { font-size: 16px; }
+
+h4 { font-size: 14px; }
+
+code {
+  font-family: Monaco;
+  font-size: 10px;
+  color: $dark-grey;
+  background: $lightest-grey;
+  padding: 3px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.important {
+  font-weight: 500;
+  color: $primary-color;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.onum {
+  font-feature-settings:"onum" 1;
+  -moz-font-feature-settings:"onum=1";
+  -ms-font-feature-settings:"onum" 1;
+  -o-font-feature-settings:"onum" 1;
+  -webkit-font-feature-settings:"onum" 1;
+}

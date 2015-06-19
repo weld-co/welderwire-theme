@@ -1,0 +1,12 @@
+#intercom-container #intercom-launcher .intercom-launcher-button {
+  background-color: $dark-grey;
+  border: none;
+  box-shadow: none;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+#intercom-container #intercom-launcher.intercom-launcher-with-avatar .intercom-launcher-button {
+  background-color: transparent;
+}

@@ -1,0 +1,13 @@
+$small-break: 50em;
+
+@mixin small() {
+  @media screen and (max-width: $small-break) { 
+    @content;
+  }
+}
+
+@mixin large() {
+  @media screen and (min-width: $small-break) {
+    @content;
+  }
+}

@@ -1,0 +1,160 @@
+<template name="custom_css">
+  <style>
+
+      {{elementColors}}
+
+      body, textarea, input, button, input[type="submit"], input[type="button"]{
+        font-family: {{getSetting 'fontFamily'}};
+      }
+
+      body{
+        background: {{getSetting "backgroundCSS"}};
+      }
+
+      .logo-image a{
+        max-height:{{getSetting "logoHeight"}}px;
+        max-width:{{getSetting "logoWidth"}}px;
+      }
+
+      {{hideAuthClass}}
+
+      @media screen and (max-width: 600px) {
+        /* find a way to get rid of this */
+        .post-discuss .icon, .post-discuss .action-count{
+          color: {{getSetting "buttonColor"}};
+        }
+      }
+
+      .non-member {
+        background-image: url({{getSetting "siteImage"}});
+        background-color: {{getSetting "accentColor"}};
+      }
+
+      .non-member.no-background {
+        color: {{getSetting "accentColor"}};
+      }
+
+      .header {
+        background-color: {{getSetting "accentColor"}};
+      }
+
+      .logo-wrap {
+        background-color: {{getSetting "accentColor"}};
+        color: {{getSetting "accentContrastColor"}};
+      }
+
+      /* Sidebar Background Color */
+      .sidebar,
+      .menu-description {
+        background-color: {{getSetting "sidebarColor"}};
+      }
+
+      /* Link And Button Colors */
+
+      a.post-domain,
+      a.post-category:hover,
+      a.post-domain:hover,
+      .launch-icon {
+        color: {{getSetting "accentColor"}} !important;
+      }
+
+      .important {
+        color: {{getSetting "accentColor"}};
+      }
+
+      .markdown a {
+        color: {{getSetting "accentColor"}};
+      }
+
+      .btn,
+      .button {
+        color: {{getSetting "accentContrastColor"}} !important;
+      }
+
+      .more-button,
+      .load-more-days-button {
+        color: {{getSetting "accentColor"}};
+      }
+
+      .more-button:hover,
+      .load-more-days-button:hover {
+        color: {{getSetting "accentContrastColor"}};
+        background-color: {{getSetting "accentColor"}};
+      }
+
+      /* Post Elements*/
+
+      .posts.list > .post.sticky {
+       background-color: {{getSetting "accentColor"}};
+      }
+
+      .post:hover .post-title {
+        color: {{getSetting "accentColor"}} !important;
+      }
+
+      /* Upvoted and Commented Icon Colors*/
+
+      .post:not(.sticky) .upvote-link.upvoted,
+      .single-post .upvote-link.upvoted,
+      .post:not(.sticky) .comments-link.commented,
+      .single-post .comments-link.commented {
+        color: {{getSetting "accentColor"}};
+      }
+
+      .post-thumbnail-link:not(.post-thumbnail-has-video):after {
+        background-color: {{getSetting "sidebarColor"}};
+      }
+
+      .no-posts {
+        color: {{getSetting "accentColor"}};
+      }
+
+      .no-skill {
+        background-color: {{getSetting "accentColor"}};
+      }
+
+      .af-fieldgroup-heading {
+        color: {{getSetting "accentColor"}};
+      }
+
+      input[type="text"]:focus,
+      input[type="url"]:focus,
+      input[type="password"]:focus,
+      input[type="number"]:focus,
+      input[type="date"]:focus,
+      input[type="time"]:focus,
+      input[type="email"]:focus,
+      textarea:focus,
+      .login-form input:focus,
+      input.form-control:focus {
+        border-color: {{getSetting "accentColor"}};
+      }
+
+      .checkbox input:checked {
+        background-image: url({{getSetting "checkboxImage"}})
+      }
+
+      .radio input:checked {
+        background-image: url({{getSetting "radioImage"}})
+      }
+
+      .loader {
+        border-left-color: {{getSetting "accentColor"}};
+      }
+      ::selection {
+        color: {{getSetting "accentContratColor"}};
+        background-color: {{getSetting "accentColor"}};
+      }
+
+      .page-title,
+      .markdown h1,
+      .markdown h2,
+      .markdown code {
+        color: {{getSetting "accentColor"}};
+      }
+
+      {{extraCSS}}
+
+  </style>
+  <link href='{{getSetting "fontUrl"}}' rel='stylesheet' type='text/css'>
+</template>

@@ -1,0 +1,17 @@
+<template name="custom_layout">
+  {{> css}}
+  {{> messages}}
+  {{> modules "hero"}}
+  <div class="grid-wrap">
+    {{#if canView}}
+      {{> weld_sidebar}}
+    {{/if}}
+    <main class="content-wrap column">
+      {{> nav}}
+      {{> search}}
+      <div class="content column {{pageName}}">
+        {{> yield}}
+      </div> <!-- content -->
+    </main> <!-- content-wrap -->
+  </div> <!-- grid-wrap -->
+</template>

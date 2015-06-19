@@ -1,0 +1,18 @@
+<template name="weld_instagram_confirm">
+  <div class="non-member column center no-background">
+    <div class="non-member-wrap optical">
+      <div class="instagram-confirm-message">
+        {{#autoForm id="afInstagramConfirm" collection="Meteor.users" doc=this type="update"}}
+          <h1 class="confirm-title">Add Your Instagram Feed?</h1>
+          {{> afQuickField type="hidden" name="telescope.instagramAccessToken"}}
+          {{> afQuickField type="hidden" name="telescope.instagramUserID"}}
+          <button type="submit" class="btn margin-t confirm">Confirm</button>
+        {{/autoForm}}
+      </div>
+      <div class="instagram-success-message hidden">
+        <h1>Nice. It worked!</h1>
+        <h3>Your Instagram account has been added.</h3>
+      </div>
+    </div>
+  </div>
+</template>

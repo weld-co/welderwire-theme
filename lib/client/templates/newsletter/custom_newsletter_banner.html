@@ -1,0 +1,14 @@
+<template name="custom_newsletter_banner">
+{{#if showBanner}}
+  <div class="newsletter-banner">
+    <a href="#" class="newsletter-dismiss">×</a>
+    <form>
+      <a href="#" class="newsletter-button">
+        <span class="newsletter-cta"></span>
+      </a>
+      <span class="loader absolute-center"></span>
+    </form>
+    <div class="newsletter-subscribed">Success!</div>
+  </div>
+{{/if}}
+</template>

@@ -1,0 +1,508 @@
+$page-padding: 5vw;
+$padding: 2em;
+$margin: 2em;
+
+$header-height: 70px;
+$mobile-header-height: $header-height - 20px;
+
+.desktop-only {
+  @include small {
+    display: none !important;
+  }
+}
+
+.mobile-only {
+  @include large {
+    display: none !important;
+  }
+}
+
+.important {
+  color: $primary-color;
+}
+
+.hidden {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+[hidden] {
+  display: none;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.no-wrap {
+  white-space: nowrap
+}
+
+.scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-horizontal {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-vertical {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+.padding {
+  padding: $page-padding;
+}
+
+.padding-tb {
+  padding: $page-padding 0;
+}
+
+.padding-lr {
+  padding: 0 $page-padding;
+}
+
+/*====================================================
+    Sizes
+====================================================*/
+
+.full-screen {
+  height: 100vh;
+  width: 100%;
+}
+
+.three-qtr-vh {
+  height: 75vh;
+}
+
+.half-vh {
+  height: 50vh;
+}
+
+.qtr-vh {
+  height: 25vh;
+}
+
+.full-w {
+  width: 100%;
+}
+
+.three-qtr-w {
+  width: 75%;
+  @include small {
+    min-width: 100%;
+  }
+}
+
+.half-w {
+  width: 50%;
+  @include small {
+    min-width: 100%;
+  }
+}
+
+// offest other side of half/half
+.right-half {
+  margin-left: 50%;
+  @include small {
+    margin-left: 0;
+    min-width: 100%;
+  }
+}
+
+.third-w {
+  width: 34%;
+  @include small {
+    min-width: 100%;
+  }
+}
+
+.qtr-w {
+  width: 25%;
+  @include small {
+    min-width: 100%;
+  }
+}
+
+// offest other side of third
+.right-third {
+  margin-left: 34%;
+  @include small {
+    margin-left: 0;
+    min-width: 100%;
+  }
+}
+
+.right-three-qtr {
+  margin-left: 25%;
+  @include small {
+    margin-left: 0;
+    min-width: 100%;
+  }
+}
+
+.full-h {
+  height: 100%;
+}
+
+.half-h {
+  height: 50%;
+}
+
+.three-qtr-h {
+  height: 75%;
+}
+
+.qtr-h {
+  height: 25%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.justified {
+  justify-content: space-around;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.absolute-center {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.top-right { // parent needs relative positioning
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  @include small {
+    margin-right: 0;
+  }
+}
+
+// Vertical & Horizontal Alignment reverses for Rows & Columns
+.column.center-tb,
+.row.center-lr {
+  justify-content: center;
+}
+
+.column.center-lr,
+.row.center-tb {
+  align-items: center;
+}
+
+.optical-center {
+  transform: translateY(-3vh);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.border-t {
+  border-top: 1px solid $light-grey;
+}
+
+.border-r {
+  border-right: 1px solid $light-grey;
+}
+
+.border-b {
+  border-bottom: 1px solid $light-grey;
+}
+
+.border-l {
+  border-left: 1px solid $light-grey;
+}
+
+.rounded {
+  border-radius: 3px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.margin-t {
+  margin-top: $margin;
+}
+
+.margin-r {
+  margin-right: $margin;
+}
+
+.margin-b {
+  margin-bottom: $margin;
+}
+
+.margin-l {
+  margin-left: $margin;
+}
+
+.padding-t {
+  padding-top: $padding;
+}
+
+.padding-r {
+  padding-right: $padding;
+}
+
+.padding-b {
+  padding-bottom: $padding;
+}
+
+.padding-l {
+  padding-left: $padding;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.tracked {
+  letter-spacing: 4px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.sans-font {
+  font-family: $sans-font;
+}
+
+.bigger-font {
+  font-size: 105%;
+}
+
+.smaller-font {
+  font-size: 95%;
+}
+
+.thin {
+  -webkit-font-smoothing: antialiased;
+  font-weight: 100;
+}
+
+.position-r {
+  position: relative;
+}
+
+.position-a {
+  position: absolute;
+}
+
+.position-f {
+  position: fixed;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+// For wysiwyg generated content with p tags all over the place
+
+.p-inline p {
+  display: inline;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.bottom-25 {
+  @extend .bottom;
+  bottom: 25px;
+}
+
+.bottom-50 {
+  @extend .bottom;
+  bottom: 50px;
+}
+
+/*====================================================
+    Background/Image Size & Position
+====================================================*/
+
+.bkgd-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bkgd-cover {
+  background-size: cover;
+}
+
+.bkgd-contain {
+  background-size: contain;
+}
+
+.bkgd-center {
+  background-position: center;
+}
+
+.bkgd-top {
+  background-position: top;
+}
+
+.bkgd-right {
+  background-position: right;
+}
+
+.bkgd-bottom {
+  background-position: bottom;
+}
+
+.bkgd-left {
+  background-position: left;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+/*====================================================
+    Colors
+====================================================*/
+
+.clr-black {
+  color: $black;
+}
+
+.clr-grey {
+  color: $grey;
+}
+
+.clr-accent {
+  color: $primary-color
+}
+
+.clr-white {
+  color: $white;
+}
+
+.bkgd-black {
+  background-color: $black;
+  color: $white;
+}
+
+.bkgd-trans-black {
+  background-color: fade-out($black, 0.25);
+}
+
+.bkgd-accent {
+  background-color: $primary-color;
+  color: $white;
+}
+
+.bkgd-white {
+  background-color: $white;
+  color: $black;
+}
+
+.bkgd-lightest-grey {
+  background-color: $lightest-grey;
+  color: $black;
+}
+
+.bkgd-gradient {
+  background: $bkgd-gradient;
+}
+
+// Depth Chart
+
+.depth-0  { z-index: -1;   }
+.depth-1  { z-index: 100;  }
+.depth-2  { z-index: 200;  }
+.depth-3  { z-index: 300;  }
+.depth-4  { z-index: 400;  }
+.depth-5  { z-index: 500;  }
+.depth-6  { z-index: 600;  }
+.depth-7  { z-index: 700;  }
+.depth-8  { z-index: 800;  }
+.depth-9  { z-index: 900;  }
+.depth-10 { z-index: 1000; }

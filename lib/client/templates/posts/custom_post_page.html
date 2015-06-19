@@ -1,0 +1,50 @@
+<!--
+  1. using specific parts of post_item instead of that whole template
+  2. make title link go to url of post if there is one
+  3. added post_domain with categories
+  4. changed order of comment_subit and list
+  5. added edit link to post-heading
+-->
+<template name="custom_post_page">
+  <div class="single-post">
+
+    {{#if isPending}}
+    <div class="grid">
+      <div class="error pending-message module">
+        {{_ "thanks_your_post_is_awaiting_approval"}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{> post_thumbnail}}
+
+    <div class="post-heading">
+      <span class="post-title">{{title}}</span>
+      <a class="post-author" href="{{getProfileUrl userId}}">by {{authorName}}</a>
+      {{#if canEdit this}}
+        {{!-- TODO #if isStillEditable --}}
+        <a class="button margin-t display-inline-block" href="{{pathFor route='post_edit' _id=_id}}">
+          <svg class="edit-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#fff" d="M0 16l5-2-3-3-2 5zm10-13.1l3 3-7 7-3-3 7-7zm6 .1l-2 2-3-3 2-2 3 3z"/></svg>
+          Edit This Post
+        </a>
+      {{/if}}
+    </div>
+
+    <div class="post-categories-container">{{> post_domain}}{{> post_categories}}</div>
+
+    {{#if body}}
+      {{> post_body}}
+    {{/if}}
+
+    <div class="post-meta no-wrap scrollable-horizontal no-scrollbar">
+      <div class="post-upvoters">
+        {{> post_avatars}}
+      </div>
+      {{> post_info}}
+    </div>
+
+    {{> comment_list}}
+    {{> comment_submit}}
+
+  </div>
+</template>

@@ -1,0 +1,9 @@
+<!-- link to post page is disabled with CSS to let the .post click handler to the job -->
+<template name="custom_post_title">
+  <a class="post-title" href="{{postLink}}">{{title}}</a>
+  <div class="post-body truncate">
+    {{#if htmlBody}}
+      {{{cleanUp htmlBody}}}
+    {{/if}}
+  </div>
+</template>

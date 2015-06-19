@@ -1,0 +1,37 @@
+html,
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+// moved sidebar to sidebar.scss
+
+.content-wrap {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  min-height: 100vh;
+  transition: opacity 500ms,
+              visibility 500ms,
+              transform 500ms,
+              -webkit-filter 500ms;
+}
+
+// if sidebar, add margin to content-wrap
+
+.sidebar + .content-wrap {
+  margin-left: 300px;
+  @include small {
+    margin-left: 0;
+  }
+}
+
+.content {
+  align-self: center;
+  padding: 8% $padding;
+  width: 100%;
+  max-width: 50rem;
+  @include small {
+    padding: 8% ($padding / 2);
+  }
+}

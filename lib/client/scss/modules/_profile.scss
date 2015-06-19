@@ -1,0 +1,352 @@
+$profile-header-height: 25vw;
+
+.user_profile {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  margin-bottom: 25vh;
+}
+
+.profile-header {
+  height: $profile-header-height;
+  min-height: 325px;
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+  background: fade-out($black, 0.8);
+}
+
+.user-data {
+  padding: 2rem;
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include small {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  > * {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: rgba(255,255,255,0.5);
+    &:hover {
+      color: rgba(255,255,255,1);
+    }
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+.badge {
+  padding: 2px 6px;
+  display: inline;
+  border-radius: 3px;
+  background: white;
+  color: $primary-color;
+}
+
+.profile-edit {
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 2rem;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+  transition: opacity 250ms;
+  &:hover {
+    background: white;
+    opacity: 1;
+  }
+  @include small {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+// Edit & View Links on Profile Edit page
+.user-edit {
+  position: relative;
+}
+
+.profile-header .avatar {
+  height: 125px;
+  width: 125px;
+  margin: 0;
+  filter: drop-shadow(0px 0px 15px fade-out($black, 0.5));
+
+  .avatar-image,
+  .avatar-initials {
+    font-size: 1.5rem;
+    line-height: 5.5;
+  }
+}
+
+.edit-avatar {
+  display: block;
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.profile-name {
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+}
+
+.profile-location {
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: .5rem;
+  a.important {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+
+.profile-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale(1.5);
+  display: block;
+  z-index: -1;
+  filter: blur(50px);
+}
+
+.profile-links {
+  padding: 2rem;
+  font-size: 16px;
+  text-align: center;
+  line-height: 4;
+  color: $grey;
+  background: $lightest-grey;
+
+  @include small {
+    flex-direction: column;
+  }
+
+  .social-link {
+    display: inline-block;
+    margin-right: 1rem;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.has-icon svg {
+      fill: currentColor;
+      vertical-align: middle;
+      margin-right: 0.2rem;
+      margin-top: -2px;
+    }
+  }
+}
+
+.profile-bio-wrap {
+  padding: 3rem;
+  min-height: 350px;
+  text-align: center;
+  @include small {
+    padding: 1.5rem;
+  }
+}
+
+.profile-bio {
+  max-width: 900px;
+  font-size: 21px;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.profile-skills-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+
+.profile-skill {
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 8px 15px;
+  margin-bottom: 1rem;
+  background: #EFEEEE;
+  border-radius: 50px;
+  min-width: 150px;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  @include small {
+    margin-right: 0 !important;
+  }
+}
+
+.no-skill {
+  background: $primary-color;
+  color: white !important;
+}
+
+.social-wrap {
+  margin-bottom: 5rem;
+  width: 100%;
+}
+
+.instagram-placeholder {
+  height: 50vw;
+  background: url(../img/instagram-placeholder.svg) no-repeat center;
+  background-size: cover;
+  padding: 2rem;
+}
+
+.instafeed a {
+  width: 20%;
+  font-size: 0;
+  position: relative;
+
+  &:before {
+    content: '';
+    background: $bkgd-gradient-faint;
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    position: absolute;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.twitter-wrap {
+  background: fade-out($lightest-grey, 0.5);
+  padding: 8% 1rem;
+  width: 100%;
+}
+
+.twitter-block {
+  margin: 2rem 1rem;
+  position: relative;
+}
+
+.twitter-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: -2rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+// Authentication popup
+.auth-success-message {
+  animation: scale-up 300ms $cubic;
+}
+
+.user-profile-posts,
+.user-profile-comments,
+.user-profile-votes {
+  margin-bottom: 6rem;
+  padding: 0 5%;
+  font-size: 14px;
+  line-height: 1.4;
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 1rem;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  thead {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    @include small {
+      text-transform: none;
+      letter-spacing: 0;
+    }
+  }
+
+  tr:nth-child(2n+1) {
+    background: fade-out($lightest-grey, 0.5);
+  }
+
+  td {
+    padding: 1rem;
+    width: 60%;
+  }
+}
+
+form input[type="submit"].save-button,
+.accounts-dialog input[type="submit"].save-button {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0;
+  color: white;
+  background: #f1592a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: inline;
+  text-align: left;
+  width: auto;
+  font-weight: bold;
+}
+
+/*====================================================
+    Twitter
+====================================================*/
+
+.controls:before + input[name='telescope.twitter'] {
+  content: '@';
+  display: block;
+}

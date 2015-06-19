@@ -1,0 +1,52 @@
+<template name="weld_members_page">
+  <div class="no-results column">
+    <div class="no-results-headline">Dang it.</div>
+    No matches were found.
+  </div>
+  <section class="control-bar row no-wrap scrollable-horizontal no-scrollbar">
+    <span data-js="filters" class="control-wrap nowrap">
+
+      <span data-js="reset" class="toggle">View All</span>
+
+      <span data-js="select-wrap">
+        <select data-js="select-dropdown" class="styled-select skills-select toggle">
+          <option value="">All locations</option>
+          {{#each users}}
+            {{#if telescope.membership}}
+            <option class="option" value=".{{telescope.membership}}">{{telescope.membership}}</option>
+            {{/if}}
+          {{/each}}
+        </select>
+      </span>
+
+      <span data-js="select-wrap">
+        <select data-js="select-dropdown" class="styled-select skills-select toggle">
+          <option value="">All skills and services</option>
+          {{#each users}}
+            {{#if telescope.skill1}}
+            <option class="option" value=".{{telescope.skill1}}">{{telescope.skill1}}</option>
+            {{/if}}
+            {{#if telescope.skill2}}
+            <option class="option" value=".{{telescope.skill2}}">{{telescope.skill2}}</option>
+            {{/if}}
+            {{#if telescope.skill3}}
+            <option class="option" value=".{{telescope.skill3}}">{{telescope.skill3}}</option>
+            {{/if}}
+          {{/each}}
+        </select>
+      </span>
+
+      <span class="sort-label">Sort:</span>
+      <span class="sort" data-sort="name:asc">A–Z</span>
+      <span class="sort" data-sort="random">Random</span>
+
+    </span>
+  </section>
+  <span class="total cell center"><span class="total-number"></span></span>
+
+  <div data-js="mixitup" class="members-page-wrap row space-around">
+    {{#each users}}
+      {{> weld_members_item}}
+    {{/each}}
+  </div>
+</template>

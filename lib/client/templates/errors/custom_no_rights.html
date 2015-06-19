@@ -1,0 +1,22 @@
+<template name="custom_no_rights">
+  <div class="non-member column center">
+    <div class="non-member-wrap optical">
+
+      {{#if logoUrl}}
+        <img class="logo" src="{{logoUrl}}" alt="{{getSetting "title"}}"/>
+      {{else}}
+        <span class="logo uppercase tracked">{{getSetting "title"}}</span>
+      {{/if}}
+
+      {{#if isLoggedIn}}
+        <h1>Thanks for signing up!</h1>
+        <h3>We'll notify you when your account has been confirmed.</h3>
+      {{else}}
+        <h1>{{getSetting "title"}}</h1>
+        <h2>{{getSetting "tagline"}}</h2>
+        <a href="{{pathFor route='atSignIn'}}" class="sign-in btn margin-t display-inline-block">{{_ "Sign In"}}</a>
+      {{/if}}
+
+    </div>
+  </div>
+</template>

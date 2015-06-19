@@ -1,0 +1,20 @@
+<div class="post-item">
+<br>
+
+<span class="post-title">
+  <a href="{{postLink}}" target="_blank">{{title}}</a>
+</span>
+
+<div class="post-meta">
+  By <a href="{{profileUrl}}" target="_blank">{{authorName}}</a> | <a href="{{postPageLink}}" target="_blank">{{commentCount}} Comments</a>
+</div>
+
+{{#if body}}
+  <div class="post-body-excerpt">
+    {{{htmlBody}}}
+  </div>
+{{/if}}
+<a href="{{postPageLink}}" class="comment-link post-cta" target="_blank">Join the conversation.</a>
+
+<br>
+</div>

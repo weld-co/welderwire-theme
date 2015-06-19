@@ -1,0 +1,89 @@
+// hiding social login until it works better
+
+.fullPageAtForm {
+  justify-content: center;
+}
+
+.at-oauth {
+  text-align: center;
+}
+
+.at-form {
+  align-self: center;
+}
+
+.at-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.at-sep {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+
+  &:before, &:after {
+    display: block;
+    content: " ";
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    position: absolute;
+    top: 48%;
+  }
+
+  &:before {
+    left: -55%;
+  }
+
+  &:after {
+    right: -55%;
+  }
+}
+
+.at-pwd-link {
+  font-size: 13px;
+  margin-bottom: 1.5rem;
+}
+
+.at-signin-link {
+  text-align: center;
+}
+
+.at-signup-link {
+  display: none;
+}
+
+.has-error span,
+.at-error,
+.at-result {
+  text-align: center;
+  color: white;
+  display: block;
+  background: $red;
+  padding: 0.5rem 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  animation: flipIn 200ms cubic-bezier(0.5, -0.5, 0.25, 1.5);
+}
+
+.at-result {
+  background: rgb(152, 194, 136) !important;
+}
+
+.at-btn.submit {
+  width: 100%;
+}
+
+.at-signin-link {
+  margin-top: 2rem;
+}
+
+.at-signin {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: $primary-color;
+}

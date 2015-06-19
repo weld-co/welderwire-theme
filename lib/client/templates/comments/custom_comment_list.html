@@ -1,0 +1,9 @@
+<!-- changed commentThreadBottom to commentThreadTop see custom_modules_weld.js -->
+<template name="custom_comment_list">
+  {{> modules "commentThreadTop"}}
+  <ul class="comments comment-list" aria-live="polite">
+    {{#each child_comments}}
+      {{> comment_item}}
+    {{/each}}
+  </ul>
+</template>

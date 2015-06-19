@@ -1,0 +1,10 @@
+<a class="title" href="{{postUrl}}">{{postTitle}}</a>
+<div class="notification-type">New Post by <a href="{{profileUrl}}">{{postAuthorName}}</a></div>
+
+{{#if htmlBody}}
+<div class="post-body">
+  {{{htmlBody}}}
+  </div>
+{{/if}}
+
+<a class="button" href="{{postUrl}}">Comment on this post</a>

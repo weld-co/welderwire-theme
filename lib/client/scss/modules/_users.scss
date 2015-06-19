@@ -1,0 +1,101 @@
+.users_dashboard {
+  overflow-x: scroll;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+
+  .actions a {
+    color: $primary-color !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+}
+
+.user-table,
+.reactive-table {
+  font-size: 13px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.fa-filter {
+  display: none;
+}
+
+input.reactive-table-input {
+  -webkit-appearance: none;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  margin: 1rem;
+  width: auto;
+  font-size: 0.875rem;
+  background: white;
+  height: $input-height;
+  line-height: $input-height;
+  border: 2px solid $light-grey;
+  border-radius: 0;
+  transition: border-color 500ms;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0px 0px 5px 0px rgba($grey,0.5);
+  }
+}
+
+.user-table thead {
+  font-weight: 600;
+  background: $lightest-grey;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.user-table thead th {
+  height: 50px;
+  vertical-align: middle;
+  &:not(:last-child) {
+    padding-right: 1rem;
+  }
+}
+
+.user-table tr {
+  border-bottom: 1px solid $light-grey;
+}
+
+.user-table td {
+  white-space: nowrap;
+  vertical-align: middle;
+  &:not(:last-child) {
+    padding-right: 1rem;
+  }
+}
+
+.user-table th.avatar,
+.user-table td.avatar {
+  display: initial;
+  height: initial;
+  width: initial;
+  margin: initial;
+  vertical-align: initial;
+}
+
+.user-table td.avatar {
+  .avatar {
+    height: 75px;
+    width: 75px;
+    margin: 0;
+  }
+  .avatar-image,
+  .avatar-initials  {
+    border-radius: 0;
+    line-height: 75px;
+    font-size: 1rem;
+  }
+}
+
+.reactive-table-navigation {
+  padding: 1rem;
+  line-height: 2;
+}

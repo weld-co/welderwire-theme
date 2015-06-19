@@ -1,0 +1,37 @@
+<template name="custom_pages_menu">
+  <li class="member-menu">
+    <ul role="menu">
+      <li><a href="{{pathFor 'members'}}" class="important">Member Directory</a></li>
+      <li><a href="http://learn.weld.co/" target="_blank">Knowledge Base</a></li>
+
+      {{#if hasPages}}
+        {{#each pages}}
+          <li><a href="{{pathFor route='page'}}">{{title}}</a></li>
+        {{/each}}
+      {{/if}}
+
+      <!-- Dallas Member Links -->
+      <li class="dropdown">
+        <span class="dropdown-top-level">Dallas</span>
+        <div class="dropdown-menu">
+          <ul role="menu" aria-labelledby="dLabel">
+            <li><a href="{{pathFor 'dallasBookings'}}">Book the Studio/Room</a></li>
+            <li><a href="https://plasso.co/s/4ScTtpYf2G" target="_blank">Tip the Studio</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- Nashville Member Links -->
+      <li class="dropdown">
+        <span class="dropdown-top-level">Nashville</span>
+        <div class="dropdown-menu">
+          <ul role="menu" aria-labelledby="dLabel">
+            <li><a href="{{pathFor 'nashvilleBookings'}}">Book the Studio/Room</a></li>
+            <li><a href="https://plasso.co/s/m8NVRJLF6W" target="_blank">Tip the Studio</a></li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </li><!-- member-menu -->
+</template>

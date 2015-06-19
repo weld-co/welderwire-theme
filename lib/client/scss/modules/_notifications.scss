@@ -1,0 +1,35 @@
+.notification-icon {
+  fill: $primary-color;
+  vertical-align: top;
+}
+
+.notification-count {
+  margin-left: 5px;
+}
+
+a.mark-as-read {
+  color: white;
+}
+
+.notification-item {
+  margin-bottom: 1rem;
+  font-size: 16px;
+  &:last-child {
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  }
+}
+
+.notification-html {
+  a {
+    display: inline;
+    text-decoration: underline;
+  }
+}
+
+.notification-timestamp {
+  color: $middle-grey;
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  display: block;
+}

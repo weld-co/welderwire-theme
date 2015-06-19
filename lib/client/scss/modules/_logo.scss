@@ -1,0 +1,42 @@
+.logo-wrap {
+  width: 100%;
+  flex-grow: 0;
+  min-height: $header-height;
+  color: $white;
+  background-color: $primary-color;
+  &:hover {
+    color: white;
+  }
+  @include small {
+    min-height: $mobile-header-height;
+    background-origin: transparent;
+  }
+}
+
+.logo,
+.back-arrow {
+  transition: transform 250ms cubic-bezier(0.5, -0.75, 0.25, 1.5), opacity 350ms ease;
+  font-weight: 600;
+}
+
+.back-arrow {
+  opacity: 0;
+  color: inherit;
+  height: auto;
+  width: 0;
+  overflow: visible;
+  position: absolute;
+  line-height: $header-height;
+}
+
+.logo-wrap:hover .logo{
+  @include large {
+    transform: translateX(1rem);
+  }
+}
+
+.logo-wrap:hover .back-arrow {
+  opacity: 1;
+  transform: translateX(-0.75rem);
+}
+

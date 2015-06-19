@@ -1,0 +1,170 @@
+.comments-list {
+  margin-bottom: 200px;
+}
+
+.comment-new {
+  margin-bottom: 3rem;
+}
+
+.comment-deleted {
+  padding: 0.5rem;
+  font-size: 12px;
+  background: $black;
+  color: $white;
+  text-align: center;
+  &:after {
+    content: " — Admin-Only Message";
+    font-style: italic;
+  }
+}
+
+.comment-content {
+  .avatar {
+    vertical-align: middle;
+    margin-right: 0.2rem;
+  }
+}
+
+.comment-body {
+  padding-top: 2rem;
+  border-top: 1px solid $light-grey;
+  font-size: 14px;
+}
+
+.comment-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.comment-text p {
+  line-height: 1.5;
+}
+
+.comment-children {
+  .comment.module {
+    border-left: 5px solid $lightest-grey;
+  }
+  .comment-body {
+    padding-left: 1rem;
+  }
+}
+
+.comment-meta { //also in post_info.scss
+  margin: 1rem 0;
+  text-align: right;
+  opacity: 0.3;
+  transition: opacity 200ms ease-in-out;
+  @include small {
+    opacity: 1;
+  }
+}
+
+.comment-main:hover .comment-meta {
+  opacity: 1;
+}
+
+.comment-username {
+  font-size: bold;
+  margin-top: 0.5rem;
+}
+
+.selected-comment {
+  margin-bottom: 2rem;
+}
+
+.authorname {
+  display: block;
+  margin-top: 1rem;
+  &:after {
+    content: attr(data-username);
+    color: $grey;
+    vertical-align: middle;
+    font-size: 12px;
+  }
+}
+
+.post-subscribe {
+  position: relative;
+  top: -50px;
+  right: 0;
+  margin: auto;
+  text-align: right;
+  font-size: 21px;
+  z-index: 0;
+}
+
+
+a.subscribe-link,
+a.unsubscribe-link {
+  height: 50px;
+  width: 50px;
+  float: right;
+  background: $primary-color;
+  color: white;
+  z-index: 10;
+}
+
+.subscribe-icon {
+  fill: white;
+  opacity: 1;
+  transition: transform 200ms cubic-bezier(0.5, -0.75, 0.25, 1.5), opacity 200ms;
+}
+
+a.subscribe-link .subscribe-icon {
+  opacity: 0.5;
+}
+
+a.unsubscribe-link .subscribe-icon {
+  transform: scale(1.5);
+}
+
+a.subscribe-link:before,
+a.unsubscribe-link:before {
+  content: 'Subscribe to this thread';
+  position: absolute;
+  right: 50px;
+  font-size: 12px;
+  color: $lightest-grey;
+  background: $black;
+  line-height: 50px;
+  height: 50px;
+  padding: 0 1rem;
+  opacity: 0;
+  transition: opacity 300ms;
+  pointer-events: none;
+  z-index: 5;
+  @include small {
+    display: none;
+  }
+}
+
+a.unsubscribe-link:before {
+  background: lighten($primary-color, 10%);
+  color: white;
+  content: 'Subscribed!';
+  animation: fade-in 500ms;
+}
+
+.post-subscribe:hover  {
+  a.subscribe-link:before,
+  a.unsubscribe-link:before {
+    opacity: 1;
+  }
+}
+
+.comment-submit-button {
+  margin-top: 50px;
+}
+
+/*====================================================
+    Overwritten Elements
+====================================================*/
+
+.comment-new-heading,
+.comment-new label {
+  display: none !important;
+}
+
+.comment-new .btn {
+  width: 100%;
+}

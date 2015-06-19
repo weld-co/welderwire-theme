@@ -1,0 +1,405 @@
+@charset "UTF-8";
+$input-height: 2.5rem;
+
+/*====================================================
+    Form Overrides
+====================================================*/
+
+.at-form {
+  width: 100%;
+  max-width: 30rem;
+}
+
+.fieldset-heading {
+  font-weight: 600;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid $light-grey;
+}
+
+form, .accounts-dialog {
+  &.form-block {
+    background: $lightest-grey;
+    border-radius: 0;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+  }
+
+  .control-group, .form-group, .at-input {
+    margin-bottom: 1.5rem;
+
+    > label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $black;
+    }
+
+    .controls {
+      clear: both;
+    }
+  }
+}
+
+/*====================================================
+    Form Groups
+====================================================*/
+
+.form-well {
+  background: #EEE;
+  padding: 5%;
+  margin-bottom: 5rem;
+}
+
+.af-fieldGroup {
+  border: 1px solid $light-grey;
+  padding: 5%;
+  margin-bottom: 3rem;
+}
+
+.form-module {
+  margin-bottom: 5rem;
+}
+
+.af-fieldgroup-heading {
+  font-size: 21px;
+  font-weight: 700;
+  color: $primary-color;
+  background-color: $white;
+  padding: 5px;
+}
+
+/*====================================================
+    Texty Inputs
+====================================================*/
+
+input[type="text"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="email"],
+textarea,
+.login-form input,
+input.form-control {
+  -webkit-appearance: none;
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 0.875rem;
+  background: white;
+  height: $input-height;
+  line-height: $input-height;
+  border: 2px solid $light-grey;
+  border-radius: 0;
+  transition: border-color 500ms;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0px 0px 5px 0px rgba($grey,0.5);
+  }
+
+  &::-webkit-input-placeholder {
+    font-family: inherit;
+    color: $light-grey;
+  }
+
+  &.inline {
+    display: flex;
+    flex: 1;
+    justify-items: space-between;
+    min-width: 100px;
+    max-width: 230px;
+    @include small {
+      max-width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+input[type="number"] {
+  line-height: 1;
+}
+
+input[disabled='disabled']{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+textarea {
+  min-height: 7rem;
+  font-family: inherit;
+  line-height: 1.4;
+  resize: vertical;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    content: '*bold* _italic_ >quote';
+    opacity: 1;
+  }
+}
+
+.note {
+  padding: 5px 0;
+  color: $light-text;
+  font-size: 80%;
+}
+
+/*====================================================
+    Select Menu Dropdowns
+====================================================*/
+
+select,
+.styled-select {
+  -webkit-appearance: none;
+  border: 2px solid $light-grey;
+  border-radius: 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+  height: 2.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  text-transform: capitalize;
+  font-family: $base-font-family;
+  background: white url(../img/updown-icon.svg) no-repeat right 10px center;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.twitter-signup {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: m1px solid $light-grey;
+
+  .twitter-button {
+    background: #00aced;
+  }
+}
+
+.category-slug {
+  font-size:12px;
+  float:left;
+  width:80%;
+  display:block;
+}
+
+.ui-autocomplete {
+  background: white;
+  width: 200px!important;
+  padding:10px;
+  font-size:14px;
+  box-shadow: 0 1px 1px black(0.15);
+}
+
+.help-block,
+.instructions-block {
+  font-family: Menlo, Monaco, Helvetica, Arial, sans-serif;
+  color: $grey;
+  font-size: 12px;
+  margin-top: .5rem;
+  display: block;
+  @include small {
+    float: none;
+  }
+}
+
+.instruction-text,
+.help-link {
+  @include small {
+    margin: 1rem 0;
+    display: block;
+    float: none;
+  }
+}
+
+.md-hints * {
+  margin-left: 0.5rem;
+}
+
+.link-select {
+  -webkit-appearance: none;
+  background: $lightest-grey !important;
+  border-radius: 2px !important;
+  border: none !important;
+  color: $dark-grey !important;
+  display: inline-block !important;
+  font-family: Monaco;
+  font-size: 10px !important;
+  height: auto !important;
+  line-height: 1 !important;
+  padding: 3px 6px !important;
+  white-space: nowrap;
+  width: 190px !important;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/*====================================================
+    Checkboxes
+====================================================*/
+
+.categories-wrap {
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.checkbox-styled {
+  display: inline;
+  min-width: 125px;
+  margin-bottom: 0.5rem;
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  @include small {
+    max-width: 100%;
+    width: 100%;
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}
+
+.checkbox-styled input {
+  display: none;
+}
+
+.checkbox-styled > input + label {
+    background: $lightest-grey;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    padding: 0 1rem;
+}
+
+.checkbox-styled > input:checked + label {
+    background: $primary-color;
+    color: white;
+    animation: scale-up 200ms cubic-bezier(0.5, -0.75, 0.25, 1.5);
+}
+
+// Customized version of autoform Checkboxes
+
+.af-checkbox-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.checkbox {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox label,
+label.checkbox {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: $lightest-grey;
+}
+
+.form-well .checkbox label {
+  background: $white;
+}
+
+.checkbox input {
+  -webkit-appearance: none;
+  background: url(../img/checkbox.svg) center no-repeat;
+  background-size: 22px;
+  border: none;
+  height: 25px;
+  width: 25px;
+  margin-right: 0.25rem;
+  margin-top: -0.35rem;
+  outline: none;
+  overflow: visible;
+  vertical-align: middle;
+  &:checked {
+    animation: scale-up 200ms cubic-bezier(0.5, -1, 0.25, 2);
+    background-image: url(../img/checkbox-checked.svg);
+  }
+}
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  color: $primary-color;
+}
+
+/*====================================================
+    Radios
+====================================================*/
+
+.radio-wrap {
+  margin-right: 1.5rem;
+  white-space: nowrap;
+  margin-top: -2px;
+  display: inline-block;
+}
+
+.radio-group,
+.af-radio-group {
+  border: 2px solid $light-grey;
+  padding: 1.5rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.radio-inline {
+  white-space: nowrap;
+  display: inline-block;
+  @include small {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.radio-inline.fix-indent {
+  margin-right: 2rem;
+  + .radio-inline.fix-indent {
+  @extend .radio-inline.fix-indent;
+  }
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  outline: none;
+  overflow: visible;
+  border: none;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  transform: translateY(2px);
+  margin-right: 5px;
+
+  + .radio-label {
+    vertical-align: middle;
+    color: $grey;
+  }
+}
+
+
+input[type="radio"] {
+  background-image: url(../img/radio.svg);
+  &:checked {
+    background-image: url(../img/radio-checked.svg);
+  }
+}

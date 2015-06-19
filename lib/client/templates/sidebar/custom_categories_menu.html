@@ -1,0 +1,10 @@
+<template name="custom_categories_menu">
+  {{#if hasCategories}}
+    <li class="dropdown">
+      <span class="dropdown-top-level" href="/">{{_ "categories"}}</span>
+      <div class="dropdown-menu">
+        {{> menuComponent menuName="categories" menuItems=menuItems menuMode=menuMode}}
+      </div>
+    </li>
+  {{/if}}
+</template>

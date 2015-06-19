@@ -1,0 +1,9 @@
+<template name="custom_single_day_nav">
+  <div>
+    <div class="posts-day-heading row justified">
+      {{#if showPreviousDate}}<a href="{{previousDateURL}}" class="prev-link cell">Prev</a>{{/if}}
+      <span class="cell center">{{currentDate}}</span>
+      {{#if showNextDate}}<a href="{{nextDateURL}}" class="next-link cell right">Next</a>{{/if}}
+    </div>
+  </div>
+</template>

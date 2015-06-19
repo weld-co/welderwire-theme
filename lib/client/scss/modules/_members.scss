@@ -1,0 +1,268 @@
+.weld_members_page {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  // for tesults Total widget placement
+  position: relative;
+}
+
+[data-js="mixitup"] .mix {
+  display: none;
+}
+
+.control-bar {
+  // Vertically center items
+  align-items: center;
+  background-color: $lightest-grey;
+  border-bottom: 2px solid $light-grey;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  min-height: $header-height;
+  max-height: $header-height;
+  padding: 0 1.5rem;
+  position: relative;
+  width: 100%;
+
+  &.row {
+    justify-content: initial;
+  }
+}
+
+.toggle,
+.sort {
+  cursor: pointer;
+}
+
+.toggle {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  border: none;
+  font-size: 0.875rem;
+  cursor: pointer;
+  height: $input-height;
+  padding: 0 1rem;
+  background-color: white;
+  box-shadow: 0 2px 0 0 darken(white, 10);
+  margin-right: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.toggle.active {
+  color: $primary-color;
+}
+
+.skills-select {
+  max-height: $input-height;
+  width: 200px;
+  padding-right: 30px;
+}
+
+.sort,
+.sort-label {
+  font-size: 12px;
+  margin-left: 1rem;
+}
+
+.sort-label {
+  color: $grey;
+}
+
+.sort.active,
+.sort:hover {
+  color: $primary-color;
+}
+
+.total,
+.total:after {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.total {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem;
+
+  color: white;
+  font-size: 80%;
+  background: $primary-color;
+  transition: background 500ms ease-in-out;
+
+  &.loading {
+    border-style: solid;
+    border-width: 3px;
+    border-color: fade-out($primary-color, 0.8);
+    border-left-color: fade-out($primary-color, 0.4);
+    animation: rotate 500ms infinite linear;
+    background: none;
+  }
+}
+
+.members-page-wrap {
+  flex-flow: row wrap;
+  // align items to top of row
+  align-items: flex-start;
+  // align content to top of page
+  align-content: flex-start;
+  // center content left and righ
+  justify-content: center;
+
+  padding: 1rem;
+  @include small {
+    flex-direction: column;
+    align-items: stretch;
+    align-content: center;
+    padding: 0;
+  }
+}
+
+$member-radius: 5px;
+
+.member {
+  // Make all items equally fill space
+  flex-grow: 1;
+  // flex-basis is basically max-width
+  flex-basis: 260px;
+  max-width: 500px;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(239,238,238,1);
+  border-radius: $member-radius;
+  position: relative;
+  overflow: hidden;
+
+  @include small {
+    flex-basis: auto;
+  }
+
+  &:hover {
+    @include large {
+      box-shadow: none;
+    }
+  }
+}
+
+.member-rollover {
+  opacity: 0;
+  background: fade-out($primary-color, 0.1);
+  transition: opacity 200ms;
+  border-radius: $member-radius;
+  z-index: 1000;
+
+  &:hover {
+    @include large {
+      opacity: 1;
+      .view-profile {
+        opacity: 1;
+        transform: translateY(0);
+        // transition on hover eliminates reversal of mouseout
+        transition: opacity 300ms, transform 300ms cubic-bezier(0, 0, 0.25, 1.25);
+      }
+    }
+  }
+}
+
+.view-profile {
+  color: white;
+  opacity: 0;
+  transform: translateY(200px);
+}
+
+.member .avatar {
+  height: 75px;
+  width: 75px;
+  margin: 0;
+  margin-bottom: 1rem;
+  @include small {
+    height: 50px;
+    width: 50px;
+  }
+
+  .avatar-initials {
+    font-size: 1rem;
+    line-height: 80px;
+    @include small {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 55px;
+    }
+  }
+}
+
+.member-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.member-location {
+  font-size: 80%;
+  color: $grey;
+  max-width: 20rem;
+  margin: 0 auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: capitalize;
+
+  &.active {
+    color: $primary-color;
+  }
+}
+
+.member-blurb {
+  color: $dark-grey;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 15px;
+  max-height: 60px;
+  overflow-y: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.member-skills-wrap {
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.member-skill {
+  text-transform: capitalize;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 4px 10px;
+  background: #EFEEEE;
+  border-radius: 50px;
+  font-size: 11px;
+  margin: 5px 3px;
+}
+
+.no-results {
+  display: flex;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  position: absolute;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  animation: slide-up 250ms cubic-bezier(0.5, -0.75, 0.25, 1.5), fade-in 500ms ease;
+}
+
+.no-results-headline {
+  color: $weld;
+  font-size: 1.5rem;
+}
+
+.no-results.hidden {
+  display: none;
+}

@@ -1,0 +1,38 @@
+<template name="weld_members_item">
+  <span class="member mix {{telescope.skill1}} {{telescope.skill2}} {{telescope.skill3}} {{telescope.membership}}" data-name="{{telescope.displayName}}">
+
+    <span class="avatar-wrap">
+      {{> avatar user=this size="large" shape="circle"}}
+      {{> user_status}}
+    </span>
+
+    <div class="member-name">
+      {{telescope.displayName}}
+    </div>
+
+    <div class="member-location">{{telescope.location}}</div>
+
+    {{#if telescope.bio}}
+    <p class="member-blurb">{{telescope.bio}}</p>
+    {{/if}}
+
+    {{#if telescope.skill1}}
+    <div class="member-skills-wrap">
+      <span class="member-skill">{{telescope.skill1}}</span>
+
+      {{#if telescope.skill2}}
+      <span class="member-skill">{{telescope.skill2}}</span>
+      {{/if}}
+
+      {{#if telescope.skill3}}
+      <span class="member-skill">{{telescope.skill3}}</span>
+      {{/if}}
+    </div>
+    {{/if}}
+
+    <a class="member-rollover cell absolute-center center" href="{{getProfileUrl this}}">
+      <span class="view-profile">View Profile</span>
+    </a>
+
+  </span>
+</template>

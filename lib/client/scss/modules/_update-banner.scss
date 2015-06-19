@@ -1,0 +1,38 @@
+.current-release {
+  position: absolute;
+  top: 0;
+  background: fade-out($lightest-grey, 0.05);
+  padding: 40px;
+  z-index: 999999;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    line-height: 1.6;
+  }
+
+  code {
+    background: $black;
+    color: white;
+  }
+}
+
+.banner-heading {
+  color: $primary-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.release-dismiss {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 15px;
+  color: white !important;
+  background-color: $primary-color;
+  font-size: 30px;
+}

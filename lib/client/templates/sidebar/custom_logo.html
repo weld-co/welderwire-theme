@@ -1,0 +1,10 @@
+<template name="custom_logo">
+  <a href="/" class="logo-wrap row center">
+    <span class="back-arrow desktop-only">←</span>
+    {{#if logoUrl}}
+      <img class="logo" src="{{logoUrl}}" alt="{{getSetting "title"}}"/>
+    {{else}}
+      <span class="logo uppercase tracked">{{getSetting "title"}}</span>
+    {{/if}}
+  </a>
+</template>

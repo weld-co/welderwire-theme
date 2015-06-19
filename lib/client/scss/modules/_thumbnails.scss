@@ -1,0 +1,114 @@
+.post-thumbnail {
+  float: right;
+  margin-left: 1rem;
+  margin-right: 0;
+  cursor: pointer;
+
+  @include small {
+    height: 3rem;
+  }
+}
+
+
+.post-thumbnail-link:not(.post-thumbnail-has-video) {
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: 'Launch';
+    font-size: 12px;
+    color: $white;
+    background-color: $sidebar-bg;
+    pointer-events: none;
+
+    // Round container with centered icon
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    // Center icon within thumbnail
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    // Hover effects
+    opacity: 0;
+    transform: translateY(80px);
+    transition: transform 200ms cubic-bezier(0.5, -0.75, 0.25, 1), opacity 200ms;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-thumbnail-has-video:after {
+  border: none;
+  font-size: 70px;
+  text-shadow: none;
+  background: none;
+  transform: translateY(2px);
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include small{
+    display: block;
+  }
+}
+
+.post-thumbnail-image {
+  opacity: 0.5;
+  filter: brightness(0.8);
+  border-radius: 3px;
+}
+
+// Video Lightbox
+
+.showing-lightbox {
+  html, body, main {
+    overflow: hidden;
+  }
+}
+
+.post-video-lightbox {
+  z-index: 20100;
+  background: $white;
+  @include large {
+    margin-left: 300px;
+  }
+}
+
+.post-video-lightbox-inner > iframe.embedly-embed {
+  max-width: 50rem;
+  @include small {
+    max-width: 320px;
+    max-height: 250px;
+  }
+}
+
+.post-video-lightbox-hide, .post-video-lightbox-hide:link, .post-video-lightbox-hide:visited, .post-video-lightbox-hide:hover{
+  color: $black;
+}
+
+// Post Thumbnail Previews on Submit Post Page
+
+.post-thumbnail-preview {
+  border-radius: 3px;
+  filter: brightness(.9);
+}
+
+a.remove-thumbnail-link,
+a.regenerate-thumbnail-link {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-size: 0.875rem;
+
+}

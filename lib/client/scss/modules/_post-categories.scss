@@ -1,0 +1,86 @@
+a.post-category,
+a.post-domain {
+  font-size: 11px;
+  font-weight: 500;
+  color: $dark-grey;
+  background: $lightest-grey;
+  padding: 4px 6px;
+  border-radius: 2px;
+  text-transform: initial;
+  vertical-align: middle;
+  display: inline-block;
+  margin-bottom: 4px;
+
+  &:hover {
+    background: $lightest-grey;
+    color: $primary-color !important;
+  }
+}
+
+a.post-domain {
+  color: $primary-color !important;
+}
+
+a.post-category[href$="category/undefined"] {
+  display: none;
+}
+
+a.category-nashville,
+a.category-dallas {
+  background: $primary-color;
+  color: white;
+}
+
+.posts.list .post:hover {
+  a.post-category,
+  a.post-domain,
+  a.category-nashville,
+  a.category-dallas {
+    @include large {
+      background: white;
+      color: $dark-grey;
+    }
+  }
+}
+
+.posts.list > .post.sticky {
+  a.post-category,
+  a.post-domain {
+    background: white;
+    color: $dark-grey;
+  }
+}
+
+// Categories Admin Page
+
+input.category-name,
+input.category-number {
+  margin-bottom: 1rem;
+}
+
+.category-slug {
+  background: $lightest-grey;
+  border: 2px solid $light-grey;
+  padding: 12px;
+  cursor: not-allowed;
+  font-family: monospace;
+  width: 100%;
+}
+
+.category-save {
+  margin-bottom: 3rem;
+}
+
+.launch-icon {
+  vertical-align: middle;
+  display: inline-block;
+  color: $primary-color;
+  margin-top: -1px;
+  margin-left: 2px;
+  padding-right: 1px;
+  box-sizing: content-box;
+
+  path {
+    fill: currentColor;
+  }
+}

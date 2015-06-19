@@ -1,0 +1,44 @@
+<!-- removed downvote, changed to Likes and reorder items -->
+<template name="custom_comment_item">
+  <li class="comment module comment-displayed" id="{{_id}}">
+      {{#if isDeleted}}
+        {{#if isAdmin}}
+          <div class="comment-deleted">This comment has been deleted.</div>
+        {{/if}}
+      {{else}}
+       <div class="comment-body">
+        <div class="comment-content">
+          <div class="comment-main">
+            <div class="comment-text markdown">{{{htmlBody}}}</div>
+            <a class="authorname onum" href="{{getProfileUrl userId}}" data-username="— {{authorName}}, {{timeAgo ago}}">
+            {{> avatar userId=userId }}
+            </a>
+            <div class="comment-meta">
+              <div class="comment-actions">
+                {{#if upvoted}}
+                <a class="upvote-link upvoted" href="#">Liked</a>
+                {{else}}
+                <a class="upvote-link not-upvoted" href="#">Like</a>
+                {{/if}}
+                <span class="points">{{upvotes}} <span class="unit">{{likesUnitDisplayText}}</span></span>
+                <a href="{{pathFor route='comment_reply' _id=_id}}" class="comment-reply goto-comment">{{_ "reply"}}</a>
+                {{#if canEdit this}}
+                <span class="edit-post"><a href="{{pathFor route='comment_edit' _id=_id}}">{{_ "edit"}}</a></span>
+                {{/if}}
+              </div> <!-- comment-actions -->
+            </div> <!-- comment-meta -->
+          </div> <!-- comment-main -->
+        </div> <!-- comment-content -->
+    {{#if showChildComments}}
+      <ul class="comment-children comment-list">
+      {{#each childComments}}
+        {{#with this}}
+          {{> comment_item}}
+        {{/with}}
+      {{/each}}
+      </ul>
+      {{/if}}
+    </div> <!-- comment-body -->
+  {{/if}}
+  </li>
+</template>

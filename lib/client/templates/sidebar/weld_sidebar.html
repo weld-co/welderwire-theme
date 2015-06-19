@@ -1,0 +1,15 @@
+<template name="weld_sidebar">
+  <nav class="sidebar">
+    <div class="close-icon mobile-only">×</div>
+    {{#if isDesktop}}{{> logo}}{{/if}}
+    <ul class="sidebar-menu scrollable no-scrollbar">
+      {{> modules "primaryNav"}}
+      {{#if isLoggedIn}}
+        <li><a href="{{profileUrl}}">{{displayName}} </a></li>
+        <li><a href="/sign-out">{{_ "Sign Out"}}</a></li>
+      {{else}}
+        <li><a href="/sign-in">{{_ "Sign In"}}</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+</template>

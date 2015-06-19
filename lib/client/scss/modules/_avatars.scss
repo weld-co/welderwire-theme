@@ -1,0 +1,67 @@
+.avatar-link {
+  display: inline-block;
+}
+
+.avatar {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 2px;
+  margin-top: -2px;
+  vertical-align: middle;
+  outline: none;
+
+  .avatar-image {
+    color: $primary-color;
+    background: transparent;
+    border-radius: 100%;
+  }
+}
+
+.avatar .avatar-initials {
+    // make slightly smaller than avatar image
+    // so the background doesns't affect edges
+    transform: scale(0.99);
+    background: $lightest-grey;
+    border-radius: 100%;
+    color: $primary-color;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 0.55rem;
+    font-weight: 600;
+    line-height: 3;
+    transition: background 50ms ease;
+
+    @include small {
+    font-weight: 700;
+  }
+}
+
+.template-users {
+  .avatar-initials {
+    font-size: 1rem;
+    line-height: 4rem;
+  }
+}
+
+.post:not(.sticky) {
+  .avatar-initials:hover {
+    background: $primary-color !important;
+    color: $light-grey;
+  }
+}
+
+.posts.list .post:not(.sticky):hover,
+.single-post {
+  .post-meta {
+    .avatar-image,
+    .avatar-initials {
+      background: white;
+    }
+  }
+}
+
+.post-upvoters {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
