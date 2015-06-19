@@ -15,12 +15,6 @@ Package.onUse(function (api) {
 
   // ---------------------------------- 2. Files to include ----------------------------------
 
-  // i18n config (must come first)
-
-  api.addFiles([
-    'package-tap.i18n'
-  ], ['client', 'server']);
-
   // client & server
   api.addFiles([
     'lib/common/custom_admin_menu.js',
@@ -205,11 +199,5 @@ Package.onUse(function (api) {
     'lib/server/templates/custom_emailNewUser.handlebars',
     'lib/server/templates/custom_emailAccountApproved.handlebars',
   ], ['server']);
-
-  // i18n languages (must come last)
-
-  api.addFiles([
-    'i18n/en.i18n.json'
-  ], ['client', 'server']);
 
 });
