@@ -6,6 +6,10 @@
   margin-bottom: 3rem;
 }
 
+#submitCommentForm fieldset {
+  width: 100%;
+}
+
 .comment-deleted {
   padding: 0.5rem;
   font-size: 12px;
@@ -87,10 +91,7 @@
   position: relative;
   top: -50px;
   right: 0;
-  margin: auto;
-  text-align: right;
   font-size: 21px;
-  z-index: 0;
 }
 
 

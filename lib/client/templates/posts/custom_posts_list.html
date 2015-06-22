@@ -53,10 +53,10 @@ loadMoreHandler (Function)
       {{#if hasMorePosts}}
         <a class="more-button" href="#"><span>{{_ "load_more"}}</span></a>
         {{else}}
-        <div class="no-posts">That’s it. No more posts.</div>
+        <div class="no-posts flipIn">That’s it. No more posts.</div>
       {{/if}}
     {{else}}
-      <div class="no-posts">No posts were found.</div>
+      <div class="no-posts flipIn">No posts were found.</div>
     {{/if}}
   {{else}}
     <div class="loading-module">{{> loading}}</div>
