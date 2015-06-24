@@ -14,7 +14,7 @@
   </div>
 
   <form class="search">{{> esInput index="weldMembers" placeholder="Search members" allDocsOnEmpty="true" type="search" class="custom-search-field"}}</form>
-  <span class="total cell center"><span class="total-number">{{searchCount}}</span></span>
+  <span class="total cell center"><span class="total-number {{#if isSearching}}flipIn{{/if}}">{{searchCount}}</span></span>
 
   <div class="members-page-wrap row space-around">
     {{#esEach index="weldMembers"}}

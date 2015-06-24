@@ -18,8 +18,8 @@
 .loader {
   display: block;
   border-style: solid;
-  border-width: 3px;
+  border-width: 2px;
   border-color: $lightest-grey;
   border-left-color: $primary-color;
-  animation: rotate 500ms infinite linear, fade-in 1s ease;
+  animation: rotate 400ms infinite linear, fadeIn 1s ease;
 }

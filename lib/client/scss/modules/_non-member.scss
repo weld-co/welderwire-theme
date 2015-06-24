@@ -11,7 +11,7 @@
   background-position: center;
   background-size: cover;
   background-color: $primary-color;
-  animation: fade-in 500ms;
+  animation: fadeIn 500ms;
 
   &.no-background {
     background: $white;

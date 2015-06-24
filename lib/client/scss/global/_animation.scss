@@ -2,48 +2,48 @@
   Animations
 ====================================================*/
 
-@keyframes fade-in {
+@keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }}
 
-@keyframes fade-out {
+@keyframes fadeOut {
   from { opacity: 0; }
   to { opacity: 1; }}
 
-@keyframes fade-in-out {
+@keyframes fadeInOut {
   0%, 100% { opacity: 0; visibility: hidden; }
   20%, 80% { opacity: 1; visibility: visible; }}
 
-@keyframes fade-in-up {
+@keyframes fadeInUp {
   from { opacity: 0; transform: translateY(1.25rem); }
   to { opacity: 1; transform: translateY(0); }}
 
 // For modals
-@keyframes fade-in-down {
+@keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-10rem); }
   to { opacity: 1; transform: translateY(0); }}
 
-@keyframes slide-up {
+@keyframes slideUp {
   from { transform: translateY(5rem); }
   to { transform: translateY(0); }}
 
-@keyframes slide-down {
+@keyframes slideDown {
   from { transform: translateY(-5rem); }
   to { transform: translateY(0); }}
 
-@keyframes slide-right {
+@keyframes slideRight {
   from { transform: translateX(-5rem); }
   to { transform: translateX(0); }}
 
-@keyframes slide-left {
+@keyframes slideLeft {
   from { transform: translateX(5rem); }
   to { transform: translateX(0); }}
 
-@keyframes slide-far-left {
+@keyframes slideFarLeft {
   from { transform: translateX(15rem); }
   to { transform: translateX(0); }}
 
-@keyframes scale-up {
+@keyframes scaleUp {
   from { transform: scale(0.85); }
   to { transform: scale(1); }}
 
@@ -62,8 +62,12 @@
   66% { opacity: 0.40; }
   100% { opacity: 1; }}
 
+/*====================================================
+    Animation Classes
+====================================================*/
+
 .fadeIn {
-  animation: fade-in 500ms ease;
+  animation: fadeIn 500ms ease;
 }
 
 .flipIn {
@@ -71,6 +75,5 @@
 }
 
 .slideUp {
-  animation: slide-up 200ms ease-in-out;
+  animation: slideUp 200ms ease-in-out;
 }
-

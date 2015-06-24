@@ -22,16 +22,6 @@
   color: white;
   font-size: 80%;
   background: $primary-color;
-  transition: background 500ms ease-in-out;
-
-  &.loading {
-    border-style: solid;
-    border-width: 3px;
-    border-color: fade-out($primary-color, 0.8);
-    border-left-color: fade-out($primary-color, 0.4);
-    animation: rotate 500ms infinite linear;
-    background: none;
-  }
 }
 
 .members-page-wrap {
