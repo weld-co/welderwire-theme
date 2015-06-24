@@ -146,7 +146,6 @@ Package.onUse(function (api) {
     'lib/client/templates/comments/custom_comment_list.html',
 
     // Profile
-    'lib/client/templates/profile/custom_user_account.js',
     'lib/client/templates/profile/custom_user_info.html',
     'lib/client/templates/profile/custom_user_info.js',
     'lib/client/templates/profile/instafeed.min.js',
