@@ -51,14 +51,8 @@
   }
 }
 
-.posts.list .post:not(.sticky):hover,
-.single-post {
-  .post-meta {
-    .avatar-image,
-    .avatar-initials {
-      background: white;
-    }
-  }
+.posts.list .post:not(.sticky):hover .avatar-initials {
+  background: white;
 }
 
 .post-upvoters {
