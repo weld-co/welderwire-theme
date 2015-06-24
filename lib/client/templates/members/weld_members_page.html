@@ -1,12 +1,13 @@
 <template name="weld_members_page">
 
-  <div class="no-results column center">
+  <div class="no-results column center no-pointer-events">
     {{#ifEsHasNoResults index="weldMembers"}}
       <span class="text-align-center fadeIn">
         <div class="no-results-headline">Dang it.</div>
         No matches were found.
       </span>
     {{/ifEsHasNoResults}}
+
     {{#ifEsIsSearching index="weldMembers"}}
       <span class="loader"></span>
     {{/ifEsIsSearching}}
@@ -19,6 +20,10 @@
     {{#esEach index="weldMembers"}}
       {{> weld_members_item}}
     {{/esEach}}
+  </div>
+
+  <div class="search-controls cell center">
+    {{> esLoadMoreButton index="weldMembers"}}
   </div>
 
 </template>
