@@ -62,6 +62,10 @@
   66% { opacity: 0.40; }
   100% { opacity: 1; }}
 
+.fadeIn {
+  animation: fade-in 500ms ease;
+}
+
 .flipIn {
   animation: flipIn 200ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
 }
@@ -69,3 +73,4 @@
 .slideUp {
   animation: slide-up 200ms ease-in-out;
 }
+

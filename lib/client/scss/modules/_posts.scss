@@ -1,4 +1,6 @@
-.posts_list_controller {
+.posts_list_controller,
+.posts_daily,
+.single_day {
   padding: 0;
   margin-bottom: 25vh;
   @include small {

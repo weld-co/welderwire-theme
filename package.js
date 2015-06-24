@@ -34,7 +34,7 @@ Package.onUse(function (api) {
     'lib/common/user_status_schema.js',
     'lib/common/user_status_subscription.js',
     'lib/common/weld_avatars.js',
-
+    'lib/common/weld_member_search.js'
   ], ['client', 'server']);
 
   // client

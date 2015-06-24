@@ -1,52 +1,24 @@
 <template name="weld_members_page">
-  <div class="no-results column">
-    <div class="no-results-headline">Dang it.</div>
-    No matches were found.
+
+  <div class="no-results column center">
+    {{#ifEsHasNoResults index="weldMembers"}}
+      <span class="text-align-center fadeIn">
+        <div class="no-results-headline">Dang it.</div>
+        No matches were found.
+      </span>
+    {{/ifEsHasNoResults}}
+    {{#ifEsIsSearching index="weldMembers"}}
+      <span class="loader"></span>
+    {{/ifEsIsSearching}}
   </div>
-  <section class="control-bar row no-wrap scrollable-horizontal no-scrollbar">
-    <span data-js="filters" class="control-wrap nowrap">
 
-      <span data-js="reset" class="toggle">View All</span>
+  <form class="search">{{> esInput index="weldMembers" placeholder="Search members" allDocsOnEmpty="true" type="search" class="custom-search-field"}}</form>
+  <span class="total cell center"><span class="total-number">{{searchCount}}</span></span>
 
-      <span data-js="select-wrap">
-        <select data-js="select-dropdown" class="styled-select skills-select toggle">
-          <option value="">All locations</option>
-          {{#each users}}
-            {{#if telescope.membership}}
-            <option class="option" value=".{{telescope.membership}}">{{telescope.membership}}</option>
-            {{/if}}
-          {{/each}}
-        </select>
-      </span>
-
-      <span data-js="select-wrap">
-        <select data-js="select-dropdown" class="styled-select skills-select toggle">
-          <option value="">All skills and services</option>
-          {{#each users}}
-            {{#if telescope.skill1}}
-            <option class="option" value=".{{telescope.skill1}}">{{telescope.skill1}}</option>
-            {{/if}}
-            {{#if telescope.skill2}}
-            <option class="option" value=".{{telescope.skill2}}">{{telescope.skill2}}</option>
-            {{/if}}
-            {{#if telescope.skill3}}
-            <option class="option" value=".{{telescope.skill3}}">{{telescope.skill3}}</option>
-            {{/if}}
-          {{/each}}
-        </select>
-      </span>
-
-      <span class="sort-label">Sort:</span>
-      <span class="sort" data-sort="name:asc">A–Z</span>
-      <span class="sort" data-sort="random">Random</span>
-
-    </span>
-  </section>
-  <span class="total cell center"><span class="total-number"></span></span>
-
-  <div data-js="mixitup" class="members-page-wrap row space-around">
-    {{#each users}}
+  <div class="members-page-wrap row space-around">
+    {{#esEach index="weldMembers"}}
       {{> weld_members_item}}
-    {{/each}}
+    {{/esEach}}
   </div>
+
 </template>
