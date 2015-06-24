@@ -198,6 +198,7 @@ Package.onUse(function (api) {
 
   // server
   api.addFiles([
+    'lib/server/js/weld_migrations.js',
     'lib/server/js/weld_members_publication.js',
     'lib/server/js/weld_userstatus_publication.js',
     'lib/server/templates/custom_emailWrapper.handlebars',
