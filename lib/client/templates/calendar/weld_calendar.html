@@ -32,7 +32,7 @@
       </div>
 
       {{#with currentUser}}
-      <input type="hidden" name="name" value="{{telescope.name}}">
+      <input type="hidden" name="name" value="{{telescope.displayName}}">
       <input type="hidden" name="email" value="{{telescope.email}}">
       {{/with}}
       <input type="hidden" name="city" value="{{city}}">
@@ -79,7 +79,7 @@
 
       <!-- OLD DATE AND TIME -->
       {{#with currentUser}}
-      <input type="hidden" name="name" value="{{telescope.name}}">
+      <input type="hidden" name="name" value="{{telescope.displayName}}">
       <input type="hidden" name="email" value="{{telescope.email}}">
       {{/with}}
       <input type="hidden" name="city" value="{{city}}">
