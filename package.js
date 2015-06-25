@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Welderwire Telescope Theme',
-  version: '0.4.0',
+  version: '2.0.0',
   name: 'welderwire-theme'
 });
 
