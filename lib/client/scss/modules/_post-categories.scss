@@ -1,10 +1,11 @@
-a.post-category,
-a.post-domain {
+.post-category,
+.post-domain,
+.post-closed {
   font-size: 11px;
   font-weight: 500;
   color: $dark-grey;
   background: $lightest-grey;
-  padding: 4px 6px;
+  padding: 7px 8px 6px 8px;
   border-radius: 2px;
   text-transform: initial;
   vertical-align: middle;
@@ -12,30 +13,40 @@ a.post-domain {
   margin-bottom: 4px;
 
   &:hover {
-    background: $lightest-grey;
-    color: $primary-color !important;
+    background: $primary-color !important;
+    // Make sure that tags are highlighted on hover
+    color: $white !important;
   }
 }
 
-a.post-domain {
+.post-domain {
+  // make sure domains are always highlighted
   color: $primary-color !important;
 }
 
-a.post-category[href$="category/undefined"] {
+.post-category[href$="category/undefined"] {
   display: none;
 }
 
-a.category-nashville,
-a.category-dallas {
+.post-closed,
+.post-closed:hover {
+  background: darken($primary-color, 15) !important;
+  color: $white !important;
+  padding: 7px 8px 6px 8px;
+  margin-bottom: 1rem;
+}
+
+.category-nashville,
+.category-dallas {
   background: $primary-color;
   color: white;
 }
 
 .posts.list .post:hover {
-  a.post-category,
-  a.post-domain,
-  a.category-nashville,
-  a.category-dallas {
+  .post-category,
+  .post-domain,
+  .category-nashville,
+  .category-dallas {
     @include large {
       background: white;
       color: $dark-grey;
@@ -44,10 +55,12 @@ a.category-dallas {
 }
 
 .posts.list > .post.sticky {
-  a.post-category,
-  a.post-domain {
-    background: white;
-    color: $dark-grey;
+  .post-category,
+  .post-domain,
+  .post-category:hover,
+  .post-domain:hover {
+    background: white !important;
+    color: $dark-grey !important;
   }
 }
 
@@ -74,7 +87,7 @@ input.category-number {
 .launch-icon {
   vertical-align: middle;
   display: inline-block;
-  color: $primary-color;
+  color: inherit;
   margin-top: -1px;
   margin-left: 2px;
   padding-right: 1px;

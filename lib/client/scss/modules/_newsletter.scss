@@ -11,7 +11,7 @@ $banner-height: 40px;
   font: 400 0.875rem "Avenir Next";
   height: $banner-height;
   line-height: $banner-height;
-  background: fade-out($lightest-grey, 0.75);
+  background: lighten($lightest-grey, 4);
   width: 290px;
   // The border and box-shadow match Intercom's style
   border: 1px solid #e4e5e7;

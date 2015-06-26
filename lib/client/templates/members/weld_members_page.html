@@ -13,7 +13,7 @@
     {{/ifEsIsSearching}}
   </div>
 
-  <form class="search">{{> esInput index="weldMembers" placeholder="Search members" allDocsOnEmpty="true" type="search" class="custom-search-field"}}</form>
+  <div class="search">{{> esInput index="weldMembers" placeholder="Search members" allDocsOnEmpty="true" type="search" class="custom-search-field"}}</div>
   <span class="total cell center"><span class="total-number {{#if isSearching}}appearScale{{/if}}">{{searchCount}}</span></span>
 
   <div class="members-page-wrap row space-around">

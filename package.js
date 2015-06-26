@@ -1,3 +1,4 @@
+
 Package.describe({
   summary: 'Welderwire Telescope Theme',
   version: '2.0.0',
@@ -26,6 +27,7 @@ Package.onUse(function (api) {
     'lib/common/custom_admin_menu.js',
     'lib/common/custom_comment_modules.js',
     'lib/common/custom_post_modules.js',
+    'lib/common/custom_post_closed_field.js',
     'lib/common/custom_profile_fields.js',
     'lib/common/custom_profile_modules.js',
     'lib/common/custom_routes.js',
@@ -120,6 +122,7 @@ Package.onUse(function (api) {
     'lib/client/templates/posts/custom_post_avatars.html',
     'lib/client/templates/posts/custom_post_avatars.js',
     'lib/client/templates/posts/custom_post_content.html',
+    'lib/client/templates/posts/custom_post_content.js',
     'lib/client/templates/posts/custom_post_domain.html',
     'lib/client/templates/posts/custom_post_domain.js',
     'lib/client/templates/posts/custom_post_info.html',

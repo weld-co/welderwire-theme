@@ -299,13 +299,15 @@ select,
   justify-content: flex-start;
 }
 
-.checkbox {
+.af-checkbox-group .checkbox {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .checkbox label,
-label.checkbox {
+label.checkbox,
+.checkbox-inline label,
+label.checkbox-inline {
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -316,7 +318,8 @@ label.checkbox {
   background: $white;
 }
 
-.checkbox input {
+.checkbox input,
+.checkbox-inline input {
   -webkit-appearance: none;
   background: url(../img/checkbox.svg) center no-repeat;
   background-size: 22px;

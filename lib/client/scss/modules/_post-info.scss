@@ -49,12 +49,16 @@
 .upvote-link,
 .points,
 .comments-link,
-.edit-post,
 .comment-reply,
 .comment-permalink {
   &:not(:last-child) {
     margin-right: 1rem;
   }
+}
+
+.edit-post {
+  height: 14px;
+  width: 14px;
 }
 
 .post-time {

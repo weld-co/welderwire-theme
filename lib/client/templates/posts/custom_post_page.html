@@ -19,6 +19,11 @@
     {{> post_thumbnail}}
 
     <div class="post-heading">
+
+      {{#if isClosed}}
+        <span class="post-closed">Closed</span>
+      {{/if}}
+
       <span class="post-title">{{title}}</span>
       <a class="post-author" href="{{getProfileUrl userId}}">by {{authorName}}</a>
       {{#if canEdit this}}
@@ -43,8 +48,11 @@
       {{> post_info}}
     </div>
 
-    {{> comment_list}}
-    {{> comment_submit}}
-
+    {{#if isClosed}}
+      {{> comment_list}}
+    {{else}}
+      {{> comment_list}}
+      {{> comment_submit}}
+    {{/if}}
   </div>
 </template>

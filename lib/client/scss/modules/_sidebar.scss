@@ -120,8 +120,17 @@
   font-size: inherit;
 }
 
+.menu-item.item-active {
+  background: none;
+  color: $primary-color;
+}
+
 .menu-label {
   display: inherit;
+}
+
+.view-menu .menu-sub-level:hover .menu-label {
+  opacity: 0;
 }
 
 .menu-description {

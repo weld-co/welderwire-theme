@@ -35,3 +35,15 @@ body {
     padding: 8% ($padding / 2);
   }
 }
+
+.posts_list_controller,
+.page,
+.post_page,
+.post_submit,
+.weld_members_page,
+.user_profile,
+.weld_calendar_dallas,
+.weld_calendar_nashville,
+.fullPageAtForm {
+  animation: fadeIn 500ms;
+}

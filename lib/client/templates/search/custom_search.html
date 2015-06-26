@@ -1,8 +1,8 @@
 <!-- wrapped in list item, removed header-module class and placeholder text -->
 <template name="custom_search">
   {{#if hasSearch}}
-  <form class="search {{searchQueryEmpty}}">
-    <input type="search" id="search" data-js="search" class="custom-search-field" value="{{searchQuery}}" placeholder="{{_ 'search'}}">
-  </form>
+  <div data-js="search-form" class="search {{searchQueryEmpty}}">
+    <input type="search" id="search" data-js="search" class="custom-search-field" value="{{searchQuery}}" placeholder="{{_ 'search'}}" tabindex="1">
+  </div>
   {{/if}}
 </template>
