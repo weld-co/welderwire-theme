@@ -1,6 +1,6 @@
 <template name="custom_user_info">
   <div class="full-width">
-      <div class="profile-header column center">
+      <div class="profile-header-wrap column center">
 
         <div class="user-data">
           {{#if isAdmin}}
@@ -16,47 +16,58 @@
         <a class="profile-edit" href="{{pathFor route='user_edit' slug=telescope.slug}}">{{_ "Edit Profile"}}</a>
         {{/if}}
 
-        <span class="avatar-wrap">
-          <a href="{{#if telescope.site}}{{profileSiteOut}}{{else}}http://en.gravatar.com{{/if}}" target="_blank">{{> avatar user=this size="large" shape="circle"}}</a>
-          {{> user_status}}
-        </span>
+        <div class="profile-header column center">
+          <span class="avatar-wrap">
+            <a href="{{#if telescope.site}}{{profileSiteOut}}{{else}}http://en.gravatar.com{{/if}}" target="_blank">{{> avatar user=this size="large" shape="circle"}}</a>
+            {{> user_status}}
+          </span>
 
-        {{#if canEditProfile}}
-        <a class="edit-avatar" href="http://en.gravatar.com/" target="_blank">Edit on Gravatar</a>
-        {{/if}}
-
-        <div class="profile-name">
-          {{#if needsDisplayName}}
-            {{username}}
-            {{#if canEditProfile}}
-              <a class="button display-block margin-t" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Your Full Name</a>
-            {{/if}}
-          {{else}}
-            {{telescope.displayName}}
+          {{#if canEditProfile}}
+          <a class="edit-avatar" href="http://en.gravatar.com/" target="_blank">Edit on Gravatar</a>
           {{/if}}
-        </div>
 
-        <div class="profile-location">
-          {{#if telescope.membership}}
-            {{#if isDigitalMember}}
-              {{telescope.membership}} Member in {{telescope.location}}
-            {{else}}
-              Member in {{telescope.membership}}
-            {{/if}}
-          {{else}}
-            {{#if telescope.location}}
-              {{telescope.location}}
-            {{else}}
+          <div class="profile-name">
+            {{#if needsDisplayName}}
+              {{username}}
               {{#if canEditProfile}}
-                <a class="important" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Location</a>
+                <a class="button display-block margin-t" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Your Full Name</a>
               {{/if}}
+            {{else}}
+              {{telescope.displayName}}
             {{/if}}
-            {{#if canEditProfile}}
-              <a class="important" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Membership Type</a>
+          </div>
+
+            {{#if telescope.membership}}
+            <div class="profile-location">
+              {{#if isDigitalMember}}
+                {{telescope.membership}} Member in {{telescope.location}}
+              {{else}}
+                Member in {{telescope.membership}}
+              {{/if}}
+              </div>
+            {{else}}
+
+              {{#if telescope.location}}
+                <div class="profile-location">
+                  {{telescope.location}}
+                </div>
+              {{else}}
+                {{#if canEditProfile}}
+                  <a class="button display-block" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Location</a>
+                {{/if}}
+              {{/if}}
+
+              {{#if canEditProfile}}
+                <a class="button display-block" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Membership Type</a>
+              {{/if}}
+
             {{/if}}
-          {{/if}}
+
+            {{#if telescope.email}}
+              <a class="btn btn-secondary display-block margin-t margin-b" href="mailto:{{telescope.email}}">Email {{getFirstName}}</a>
+            {{/if}}
+          <span class="profile-background" style="background-image: url(http://www.gravatar.com/avatar/{{telescope.emailHash}}?d={{getSetting "defaultProfileBackground"}})"></span>
         </div>
-        <span class="profile-background" style="background-image: url(http://www.gravatar.com/avatar/{{telescope.emailHash}}?d={{getSetting "defaultProfileBackground"}})"></span>
       </div>
 
       <div class="profile-links row center">

@@ -11,12 +11,11 @@ welderwire-theme
 fourseven:scss
 mystor:device-detection
 archive:jquery-dotdotdot
-iamkevingreen:mixitup
 rzymek:fullcalendar
 cwohlman:pickadate
 mizzao:user-status
 fastclick
 msavin:mongol
 percolate:intercom
-meteorhacks:search-source
+matteodem:easy-search
 ```

@@ -7,13 +7,15 @@ $profile-header-height: 25vw;
   margin-bottom: 25vh;
 }
 
-.profile-header {
-  height: $profile-header-height;
-  min-height: 325px;
+.profile-header-wrap {
   position: relative;
   padding: 1rem;
   overflow: hidden;
   background: fade-out($black, 0.8);
+}
+
+.profile-header {
+  margin: 5% 0;
 }
 
 .user-data {
@@ -85,7 +87,7 @@ $profile-header-height: 25vw;
   position: relative;
 }
 
-.profile-header .avatar {
+.profile-header-wrap .avatar {
   height: 125px;
   width: 125px;
   margin: 0;
@@ -122,10 +124,6 @@ $profile-header-height: 25vw;
   text-align: center;
   font-size: 0.875rem;
   margin-top: .5rem;
-  a.important {
-    display: block;
-    margin: 0.5rem 0;
-  }
 }
 
 .profile-background {
