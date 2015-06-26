@@ -1,12 +1,12 @@
 <template name="custom_layout">
   {{> css}}
-  {{> messages}}
   {{> modules "hero"}}
   <div class="grid-wrap">
     {{#if canView}}
       {{> weld_sidebar}}
     {{/if}}
     <main class="content-wrap column">
+      {{> messages}}
       {{> nav}}
       {{> search}}
       <div class="content column {{pageName}}">

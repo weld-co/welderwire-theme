@@ -56,20 +56,6 @@
   display: none;
 }
 
-.has-error span,
-.at-error,
-.at-result {
-  text-align: center;
-  color: white;
-  display: block;
-  background: $red;
-  padding: 0.5rem 0;
-  width: 100%;
-  margin-bottom: 1rem;
-  border-radius: 3px;
-  animation: flipIn 200ms cubic-bezier(0.5, -0.5, 0.25, 1.5);
-}
-
 .at-result {
   background: rgb(152, 194, 136) !important;
 }

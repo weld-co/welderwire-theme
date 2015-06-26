@@ -151,6 +151,7 @@ Package.onUse(function (api) {
     // Profile
     'lib/client/templates/profile/custom_user_info.html',
     'lib/client/templates/profile/custom_user_info.js',
+    'lib/client/templates/profile/user_account_patch.js',
     'lib/client/templates/profile/instafeed.min.js',
     'lib/client/templates/profile/weld_instagram_confirm.html',
     'lib/client/templates/profile/weld_instagram_confirm.js',

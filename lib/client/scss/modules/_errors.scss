@@ -1,11 +1,10 @@
 .error {
-  background: $primary-color;
   color: white;
   height: $header-height;
   left: 0;
   line-height: $header-height;
   opacity: 0;
-  position: fixed;
+  position: absolute;
   text-align: center;
   top: 0;
   vertical-align: middle;
@@ -17,6 +16,14 @@
     height: $mobile-header-height;
     line-height: $mobile-header-height;
   }
+}
+
+.error.success-message {
+  background: $success;
+}
+
+.error.error-message {
+  background: $fail;
 }
 
 .update-banner {

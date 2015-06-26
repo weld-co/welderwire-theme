@@ -1,6 +1,6 @@
 // Colors
 $weld: #f1592a;
-$red: #EA4827;
+$red: #E24424;
 $middle-red: #A83610;
 $dark-red: #7F2311;
 $dark-blue: #46525E;
@@ -34,7 +34,6 @@ $cubic: cubic-bezier(0.75,0,0.5,1);
 $color-transition: background 400ms, color 300ms;
 
 // Applied Variables
-
 $primary-color: $weld;
 $sidebar-bg: $black;
 $search-bg: fade-out($dark-grey, 0.7);
@@ -46,4 +45,6 @@ $light-text: $grey;
 $lighter-text: $light-grey;
 $border-color: $grey;
 $highlight-color: $primary-color;
+$success: $green;
+$fail: $red;
 

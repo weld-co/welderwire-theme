@@ -194,7 +194,7 @@ select,
 
 .ui-autocomplete {
   background: white;
-  width: 200px!important;
+  width: 200px !important;
   padding:10px;
   font-size:14px;
   box-shadow: 0 1px 1px black(0.15);
@@ -219,6 +219,20 @@ select,
     display: block;
     float: none;
   }
+}
+
+.has-error span,
+.at-error,
+.at-result {
+  text-align: center;
+  color: white;
+  display: block;
+  background: $red;
+  padding: 0.5rem 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  animation: flipIn 200ms cubic-bezier(0.5, -0.5, 0.25, 1.5);
 }
 
 .md-hints * {

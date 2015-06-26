@@ -40,7 +40,7 @@
             {{#if telescope.membership}}
             <div class="profile-location">
               {{#if isDigitalMember}}
-                {{telescope.membership}} Member in {{telescope.location}}
+                {{telescope.membership}} Member {{#if telescope.location}}in {{telescope.location}}{{/if}}
               {{else}}
                 Member in {{telescope.membership}}
               {{/if}}
