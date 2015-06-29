@@ -71,14 +71,14 @@ $member-radius: 5px;
 
 .member-rollover {
   opacity: 0;
-  background: fade-out($primary-color, 0.1);
+  background: $primary-color;
   transition: opacity 200ms;
   border-radius: $member-radius;
   z-index: 1000;
 
   &:hover {
     @include large {
-      opacity: 1;
+      opacity: 0.9;
       .view-profile {
         opacity: 1;
         transform: translateY(0);

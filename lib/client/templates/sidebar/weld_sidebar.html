@@ -8,7 +8,7 @@
         <li><a href="{{profileUrl}}">{{displayName}} </a></li>
         <li><a href="/sign-out">{{_ "Sign Out"}}</a></li>
       {{else}}
-        <li><a href="/sign-in">{{_ "Sign In"}}</a></li>
+        <li><a href="{{pathFor route='atSignIn'}}">{{_ "Sign In"}}</a></li>
       {{/if}}
     </ul>
   </nav>

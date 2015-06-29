@@ -34,6 +34,12 @@
     }
   }
 
+  li {
+    line-height: $base-line-height;
+    list-style-type: square;
+    margin-bottom: 1rem;
+  }
+
   a {
     color: $primary-color;
     text-decoration: underline;

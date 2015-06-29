@@ -1,5 +1,8 @@
-// Colors
+// Accent Color
 $weld: #f1592a;
+// Sidebar Color
+$black: #302824;
+
 $red: #E24424;
 $middle-red: #A83610;
 $dark-red: #7F2311;
@@ -10,7 +13,6 @@ $yellow: #FAAA31;
 $green: #a3d06d;
 $true-black: #000000;
 $dark-black: #241D1A;
-$black: #302824;
 $dark-grey: #615D5C;
 $grey: #aaaaaa;
 $middle-grey: #cccccc;
@@ -18,6 +20,7 @@ $light-grey: #dddddd;
 $lightest-grey: #EEEEEE;
 $white: #FFFFFF;
 $blue-inactive: fade-out($blue, 0.7);
+
 // Applications
 $primary-color: $weld;
 $secondary-color: $blue;

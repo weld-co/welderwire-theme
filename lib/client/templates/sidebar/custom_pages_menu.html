@@ -1,7 +1,11 @@
 <template name="custom_pages_menu">
   <li class="member-menu">
     <ul role="menu">
-      <li><a href="{{pathFor 'members'}}" class="important">Member Directory</a></li>
+      <li>
+        <a href="{{pathFor 'members'}}" class="important">
+          {{getSetting 'memberDirectoryName'}}
+        </a>
+      </li>
       <li><a href="http://learn.weld.co/" target="_blank">Knowledge Base</a></li>
 
       {{#if hasPages}}

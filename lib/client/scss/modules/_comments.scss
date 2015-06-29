@@ -140,7 +140,7 @@ a.unsubscribe-link:before {
 }
 
 a.unsubscribe-link:before {
-  background: lighten($primary-color, 10%);
+  background: $primary-color;
   color: white;
   content: 'Subscribed!';
   animation: fadeIn 500ms;
@@ -149,7 +149,7 @@ a.unsubscribe-link:before {
 .post-subscribe:hover  {
   a.subscribe-link:before,
   a.unsubscribe-link:before {
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 

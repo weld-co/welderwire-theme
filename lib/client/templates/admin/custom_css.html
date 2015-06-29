@@ -39,6 +39,14 @@
         background-color: {{getSetting "accentColor"}};
       }
 
+      .newsletter-banner form:hover .newsletter-cta:before {
+        color: {{getSetting "accentColor"}};
+      }
+
+      .newsletter-dismiss:hover {
+        background: {{getSetting "accentColor"}};
+      }
+
       .logo-wrap {
         background-color: {{getSetting "accentColor"}};
         color: {{getSetting "accentContrastColor"}};
@@ -48,6 +56,10 @@
       .sidebar,
       .menu-description {
         background-color: {{getSetting "sidebarColor"}};
+      }
+
+      .menu-item.item-active {
+        color: {{getSetting "accentColor"}};
       }
 
       /* Link And Button Colors */
@@ -99,8 +111,34 @@
         background-color: {{getSetting "sidebarColor"}};
       }
 
+      .post-domain {
+        color: {{getSetting "accentColor"}} !important;
+      }
+
+      .post-category:hover,
+      .post-domain:hover,
+      .post-closed:hover,
+      .category-nashville,
+      .category-dallas {
+        background: {{getSetting "accentColor"}} !important;
+        color: {{getSetting "accentContrastColor"}} !important;
+      }
+
+      .avatar .avatar-initials {
+        color: {{getSetting "accentColor"}};
+      }
+
       .no-posts {
         color: {{getSetting "accentColor"}};
+      }
+
+      a.subscribe-link,
+      a.unsubscribe-link {
+        background: {{getSetting "accentColor"}};
+      }
+
+      a.unsubscribe-link:before {
+        background: {{getSetting "accentColor"}};
       }
 
       .no-skill {
@@ -135,6 +173,7 @@
       .loader {
         border-left-color: {{getSetting "accentColor"}};
       }
+
       ::selection {
         color: {{getSetting "accentContratColor"}};
         background-color: {{getSetting "accentColor"}};
@@ -144,6 +183,17 @@
       .markdown h1,
       .markdown h2,
       .markdown code {
+        color: {{getSetting "accentColor"}};
+      }
+
+      /* Members page */
+
+      .total,
+      .member-rollover {
+        background: {{getSetting "accentColor"}};
+      }
+
+      .no-results-headline {
         color: {{getSetting "accentColor"}};
       }
 

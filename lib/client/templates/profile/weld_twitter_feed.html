@@ -1,4 +1,4 @@
-<template name="twitter_feed_weld">
+<template name="weld_twitter_feed">
   <div class="twitter-wrap row center-lr">
     <div class="twitter-block">
       <span class="twitter-title">Timeline</span>
@@ -9,7 +9,7 @@
         data-chrome="noheader"
         data-screen-name="{{telescope.twitter}}"
         data-widget-id="588809315441516544"
-        data-link-color="#f1592a">
+        data-link-color="{{getSetting "accentColor"}}">
         Tweets by @{{telescope.twitter}}
       </a>
     </div>
@@ -22,7 +22,7 @@
         data-tweet-limit="5"
         data-chrome="noheader"
         data-widget-id="590545546881978370"
-        data-link-color="#f1592a">
+        data-link-color="{{getSetting "accentColor"}}">
       </a>
     </div>
   </div>

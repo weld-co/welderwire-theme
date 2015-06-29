@@ -131,7 +131,7 @@
     </div> <!-- full-width -->
 
       <div class="profile-bio-wrap column center">
-        <p class="profile-bio">
+        <p class="profile-bio margin-b">
           {{#if telescope.bio}}
             {{telescope.bio}}
           {{else}}
@@ -183,7 +183,7 @@
     {{/unless}}
 
     {{#if telescope.twitter}}
-      {{> twitter_feed_weld}}
+      {{> weld_twitter_feed}}
     {{/if}}
   </div>
 </template>
