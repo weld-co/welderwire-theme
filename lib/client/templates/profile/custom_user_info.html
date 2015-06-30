@@ -18,24 +18,38 @@
 
         <div class="profile-header column center">
           <span class="avatar-wrap">
-            <a href="{{#if telescope.site}}{{profileSiteOut}}{{else}}http://en.gravatar.com{{/if}}" target="_blank">{{> avatar user=this size="large" shape="circle"}}</a>
+            <a href="
+              {{#if telescope.site}}
+                {{profileSiteOut}}
+              {{else}}
+                {{#if telescope.emailHash}}
+                  http://en.gravatar.com
+                {{else}}
+                  http://twitter.com
+                {{/if}}
+              {{/if}}"
+            target="_blank">{{> avatar user=this size="large" shape="circle"}}</a>
             {{> user_status}}
           </span>
 
           {{#if canEditProfile}}
-          <a class="edit-avatar" href="http://en.gravatar.com/" target="_blank">Edit on Gravatar</a>
+            {{#if telescope.emailHash}}
+              <a class="edit-avatar" href="http://en.gravatar.com/" target="_blank">Edit on Gravatar</a>
+            {{/if}}
           {{/if}}
 
-          <div class="profile-name">
             {{#if needsDisplayName}}
-              {{username}}
+              <div class="profile-name">
+                {{username}}
+              </div>
               {{#if canEditProfile}}
-                <a class="button display-block margin-t" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Your Full Name</a>
+                <a class="btn display-block" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Your Full Name</a>
               {{/if}}
             {{else}}
-              {{telescope.displayName}}
+              <div class="profile-name">
+                {{telescope.displayName}}
+              </div>
             {{/if}}
-          </div>
 
             {{#if telescope.membership}}
             <div class="profile-location">
@@ -53,20 +67,25 @@
                 </div>
               {{else}}
                 {{#if canEditProfile}}
-                  <a class="button display-block" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Location</a>
+                  <a class="btn display-block" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Location</a>
                 {{/if}}
               {{/if}}
 
               {{#if canEditProfile}}
-                <a class="button display-block" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Membership Type</a>
+                <a class="btn display-block" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add Membership Type</a>
               {{/if}}
 
             {{/if}}
 
             {{#if telescope.email}}
-              <a class="btn btn-secondary display-block margin-t margin-b" href="mailto:{{telescope.email}}">Email {{getFirstName}}</a>
+              <a class="btn btn-secondary display-block margin-b" href="mailto:{{telescope.email}}">Email {{getFirstName}}</a>
             {{/if}}
-          <span class="profile-background" style="background-image: url(http://www.gravatar.com/avatar/{{telescope.emailHash}}?d={{getSetting "defaultProfileBackground"}})"></span>
+
+            {{#if telescope.emailHash}}
+            <span class="profile-background" style="background-image: url(http://www.gravatar.com/avatar/{{telescope.emailHash}}?d={{getSetting "defaultProfileBackground"}})"></span>
+            {{else}}
+            <span class="profile-background" style="background-image: url({{services.twitter.profile_image_url}})"></span>
+            {{/if}}
         </div>
       </div>
 
@@ -130,43 +149,46 @@
       </div>
     </div> <!-- full-width -->
 
-      <div class="profile-bio-wrap column center">
-        <p class="profile-bio margin-b">
-          {{#if telescope.bio}}
-            {{telescope.bio}}
-          {{else}}
+    <div class="profile-bio-wrap column center">
+      <p class="profile-bio margin-b">
+        {{#if telescope.bio}}
+          {{telescope.bio}}
+        {{else}}
+        {{#if canEditProfile}}
+          You haven’t added your bio yet!
+          <a class="button display-block margin-t" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add It Now</a>
+        {{else}}
+          {{getFirstName}} hasn't added a bio yet.
+          <p class="important">¯\_(ツ)_/¯</p>
+        {{/if}}
+      {{/if}}
+    </p>
+      <div class="profile-skills">
+        {{#if telescope.skill1}}
+        <p class="profile-skills-title">Top Professional Skills</p>
+        <span class="profile-skill">{{telescope.skill1}}</span>
+        {{else}}
           {{#if canEditProfile}}
-            You haven’t added your bio yet!
-            <a class="button display-block margin-t" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add It Now</a>
+            <a class="profile-skill no-skill" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add a skill</a>
           {{/if}}
         {{/if}}
-      </p>
-        <div class="profile-skills">
-          {{#if telescope.skill1}}
-          <p class="profile-skills-title">Top Professional Skills</p>
-          <span class="profile-skill">{{telescope.skill1}}</span>
-          {{else}}
-            {{#if canEditProfile}}
-              <a class="profile-skill no-skill" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add a skill</a>
-            {{/if}}
-          {{/if}}
 
-          {{#if telescope.skill2}}
-          <span class="profile-skill">{{telescope.skill2}}</span>
-          {{else}}
-            {{#if canEditProfile}}
-              <a class="profile-skill no-skill" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add a skill</a>
-            {{/if}}
+        {{#if telescope.skill2}}
+        <span class="profile-skill">{{telescope.skill2}}</span>
+        {{else}}
+          {{#if canEditProfile}}
+            <a class="profile-skill no-skill" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add a skill</a>
           {{/if}}
+        {{/if}}
 
-          {{#if telescope.skill3}}
-          <span class="profile-skill">{{telescope.skill3}}</span>
-          {{else}}
-            {{#if canEditProfile}}
-              <a class="profile-skill no-skill" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add a skill</a>
-            {{/if}}
+        {{#if telescope.skill3}}
+        <span class="profile-skill">{{telescope.skill3}}</span>
+        {{else}}
+          {{#if canEditProfile}}
+            <a class="profile-skill no-skill" href="{{pathFor route='user_edit' slug=telescope.slug}}">+ Add a skill</a>
           {{/if}}
-        </div>
+        {{/if}}
+      </div>
     </div> <!-- profile-bio-wrap -->
 
   <div class="social-wrap">

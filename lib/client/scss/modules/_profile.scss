@@ -119,11 +119,16 @@ $profile-header-height: 25vw;
   text-align: center;
 }
 
+.profile-name + .btn,
+.profile-location + .btn {
+  margin-top: 2rem;
+}
+
 .profile-location {
   color: rgba(255,255,255,0.5);
   text-align: center;
   font-size: 0.875rem;
-  margin: 0.5rem 0;
+  margin-top: 0.5rem;
 }
 
 .profile-background {
