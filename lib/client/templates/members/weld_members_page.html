@@ -17,6 +17,12 @@
   <span class="total cell center"><span class="total-number {{#if isSearching}}appearScale{{/if}}">{{searchCount}}</span></span>
 
   <div class="members-page-wrap row space-around">
+    <select class="js-sort-select margin-1">
+      <option selected="selected" disabled>Sort Members</option>
+      <option data-sort="name">A-Z</option>
+      <option data-sort="newest">Newest Members</option>
+      <option data-sort="oldest">Oldest Members</option>
+    </select>
     {{#esEach index="weldMembers"}}
       {{> weld_members_item}}
     {{/esEach}}

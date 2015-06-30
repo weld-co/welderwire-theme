@@ -60,6 +60,7 @@ $member-radius: 5px;
 
   @include small {
     flex-basis: auto;
+    max-width: none;
   }
 
   &:hover {

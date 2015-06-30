@@ -86,8 +86,18 @@ $mobile-header-height: $header-height - 20px;
   background: transparent;
 }
 
+/*====================================================
+    Whitespace
+====================================================*/
+
+/* Padding */
+
 .padding {
   padding: $page-padding;
+}
+
+.no-padding {
+  padding: 0;
 }
 
 .padding-tb {
@@ -96,6 +106,96 @@ $mobile-header-height: $header-height - 20px;
 
 .padding-lr {
   padding: 0 $page-padding;
+}
+
+.padding-t {
+  padding-top: $padding;
+}
+
+.padding-r {
+  padding-right: $padding;
+}
+
+.padding-b {
+  padding-bottom: $padding;
+}
+
+.padding-l {
+  padding-left: $padding;
+}
+
+.padding-1 {
+  padding: 1rem;
+}
+
+.padding-2 {
+  padding: 2rem;
+}
+
+.padding-3 {
+  padding: 3rem;
+}
+
+.padding-4 {
+  padding: 4rem;
+}
+
+.padding-5 {
+  padding: 5rem;
+}
+
+/* Margin */
+
+.margin {
+  margin: $page-padding;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-tb {
+  margin: $page-padding 0;
+}
+
+.margin-lr {
+  margin: 0 $page-padding;
+}
+
+.margin-t {
+  margin-top: $margin;
+}
+
+.margin-r {
+  margin-right: $margin;
+}
+
+.margin-b {
+  margin-bottom: $margin;
+}
+
+.margin-l {
+  margin-left: $margin;
+}
+
+.margin-1 {
+  margin: 1rem;
+}
+
+.margin-2 {
+  margin: 2rem;
+}
+
+.margin-3 {
+  margin: 3rem;
+}
+
+.margin-4 {
+  margin: 4rem;
+}
+
+.margin-5 {
+  margin: 5rem;
 }
 
 /*====================================================
@@ -290,46 +390,6 @@ $mobile-header-height: $header-height - 20px;
 
 .rounded {
   border-radius: 3px;
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.margin-t {
-  margin-top: $margin;
-}
-
-.margin-r {
-  margin-right: $margin;
-}
-
-.margin-b {
-  margin-bottom: $margin;
-}
-
-.margin-l {
-  margin-left: $margin;
-}
-
-.padding-t {
-  padding-top: $padding;
-}
-
-.padding-r {
-  padding-right: $padding;
-}
-
-.padding-b {
-  padding-bottom: $padding;
-}
-
-.padding-l {
-  padding-left: $padding;
 }
 
 .list-style-none {

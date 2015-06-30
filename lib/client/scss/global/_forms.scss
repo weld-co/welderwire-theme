@@ -173,6 +173,15 @@ select,
   &:focus {
     outline: none;
   }
+
+  @include small {
+    width: auto
+  }
+}
+
+option[disabled] {
+  color: $grey;
+  display: none;
 }
 
 .twitter-signup {
