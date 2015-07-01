@@ -146,6 +146,22 @@ textarea {
   }
 }
 
+textarea + .help-block:after {
+  content: 'Pro Tip: View the Markdown Tutorial in the sidebar to learn how to style text and add images.';
+}
+
+.help-block,
+.instructions-block {
+  color: $grey;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: .5rem;
+  display: block;
+  @include small {
+    float: none;
+  }
+}
+
 .note {
   padding: 5px 0;
   color: $light-text;
@@ -207,18 +223,6 @@ option[disabled] {
   padding:10px;
   font-size:14px;
   box-shadow: 0 1px 1px black(0.15);
-}
-
-.help-block,
-.instructions-block {
-  font-family: Menlo, Monaco, Helvetica, Arial, sans-serif;
-  color: $grey;
-  font-size: 12px;
-  margin-top: .5rem;
-  display: block;
-  @include small {
-    float: none;
-  }
 }
 
 .instruction-text,

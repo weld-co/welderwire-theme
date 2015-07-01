@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:500);
 
+$table-border: 1px solid $light-grey;
+
 .markdown {
 
   ul, p, pre, blockquote {
@@ -20,7 +22,7 @@
   }
 
   ul {
-    list-style-type: disc;
+    list-style-type: square;
   }
 
   ol {
@@ -36,7 +38,6 @@
 
   li {
     line-height: $base-line-height;
-    list-style-type: square;
     margin-bottom: 1rem;
   }
 
@@ -107,12 +108,9 @@
 
   img {
     max-width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  p img {
     display: inline;
     vertical-align: middle;
+    margin-bottom: 0.25em;
   }
 
   code {
@@ -149,5 +147,34 @@
     padding-left: 1rem;
     font-style: italic;
     color: $grey;
+  }
+
+  table {
+    width: 100%;
+    border: $table-border;
+    margin-bottom: 1.5em;
+  }
+
+  thead {
+    background-color: $lightest-grey;
+  }
+
+  tr {
+    border-bottom: $table-border;
+  }
+
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  th:not(:last-child),
+  td:not(:last-child) {
+    border-right: $table-border;
+  }
+
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    line-height: 1.4;
   }
 }
