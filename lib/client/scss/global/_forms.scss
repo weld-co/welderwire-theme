@@ -131,23 +131,43 @@ input[disabled='disabled']{
 }
 
 textarea {
-  min-height: 7rem;
+  min-height: 200px;
   font-family: inherit;
   line-height: 1.4;
   resize: vertical;
   position: relative;
   -webkit-overflow-scrolling: touch;
-  &:after {
-    display: block;
-    position: absolute;
-    bottom: -20px;
-    content: '*bold* _italic_ >quote';
-    opacity: 1;
-  }
+  background: white url(../img/resize-handle.svg) no-repeat bottom right;
 }
 
 textarea + .help-block:after {
   content: 'Pro Tip: View the Markdown Tutorial in the sidebar to learn how to style text and add images.';
+}
+
+/*====================================================
+    Fullscreen Textarea
+====================================================*/
+
+.admin_wrapper {
+  textarea:focus {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 80%;
+    padding: 3rem;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 0 0 9999px fade-out($black, 0.1);
+    z-index: 1000;
+  }
+
+  @include small {
+    &:focus {
+      top: $mobile-header-height;
+    }
+  }
 }
 
 .help-block,

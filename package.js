@@ -195,7 +195,7 @@ Package.onUse(function (api) {
     'lib/client/img/profile-default-background.jpg',
     'lib/client/img/instagram-placeholder.svg',
     'lib/client/img/cover-photo.jpg',
-
+    'lib/client/img/resize-handle.svg'
   ], ['client']);
 
   // server
