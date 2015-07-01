@@ -67,7 +67,6 @@ Package.onUse(function (api) {
     'lib/client/scss/modules/_newsletter.scss',
     'lib/client/scss/modules/_non-member.scss',
     'lib/client/scss/modules/_notifications.scss',
-    'lib/client/scss/modules/_pages.scss',
     'lib/client/scss/modules/_post-categories.scss',
     'lib/client/scss/modules/_post-info.scss',
     'lib/client/scss/modules/_posts.scss',

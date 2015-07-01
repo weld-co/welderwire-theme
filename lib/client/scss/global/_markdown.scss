@@ -2,6 +2,10 @@
 
 $table-border: 1px solid $light-grey;
 
+.page-title {
+  font-weight: bold;
+}
+
 .markdown {
 
   ul, p, pre, blockquote {
@@ -56,11 +60,6 @@ $table-border: 1px solid $light-grey;
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-
   h1, h2 {
     font-size: 3.25rem;
     margin-top: 3rem;
@@ -76,6 +75,11 @@ $table-border: 1px solid $light-grey;
 
   h2 {
     font-size: 2.25rem;
+  }
+
+  h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 0;
   }
 
   h3 {
