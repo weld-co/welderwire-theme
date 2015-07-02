@@ -17,7 +17,6 @@ Package.onUse(function (api) {
   // ---------------------------------- 2. Files to include ----------------------------------
 
   // i18n config (must come first)
-
   api.addFiles([
     'package-tap.i18n'
   ], ['client', 'server']);
@@ -36,7 +35,7 @@ Package.onUse(function (api) {
     'lib/common/user_status_schema.js',
     'lib/common/user_status_subscription.js',
     'lib/common/weld_avatars.js',
-    'lib/common/weld_member_search.js'
+    'lib/common/weld_member_search.js',
   ], ['client', 'server']);
 
   // client
@@ -176,7 +175,6 @@ Package.onUse(function (api) {
     'lib/client/templates/calendar/weld_calendar.js',
 
     // Images
-    'lib/client/img/favicon.ico',
     'lib/client/img/weld-logo.png',
     'lib/client/img/weld-logo.svg',
     'lib/client/img/checkbox.svg',
@@ -195,7 +193,23 @@ Package.onUse(function (api) {
     'lib/client/img/profile-default-background.jpg',
     'lib/client/img/instagram-placeholder.svg',
     'lib/client/img/cover-photo.jpg',
-    'lib/client/img/resize-handle.svg'
+    'lib/client/img/resize-handle.svg',
+
+    // Favicons
+    'lib/client/img/icons/favicon.ico',
+    'lib/client/img/icons/favicon-96x96.png',
+    'lib/client/img/icons/favicon-160x160.png',
+    'lib/client/img/icons/favicon-192x192.png',
+    'lib/client/img/icons/apple-touch-icon.png',
+    'lib/client/img/icons/apple-touch-icon-57x57.png',
+    'lib/client/img/icons/apple-touch-icon-60x60.png',
+    'lib/client/img/icons/apple-touch-icon-72x72.png',
+    'lib/client/img/icons/apple-touch-icon-76x76.png',
+    'lib/client/img/icons/apple-touch-icon-114x114.png',
+    'lib/client/img/icons/apple-touch-icon-120x120.png',
+    'lib/client/img/icons/apple-touch-icon-144x144.png',
+    'lib/client/img/icons/apple-touch-icon-152x152.png',
+    'lib/client/img/icons/apple-touch-icon-180x180.png',
   ], ['client']);
 
   // server
@@ -211,7 +225,6 @@ Package.onUse(function (api) {
   ], ['server']);
 
   // i18n languages (must come last)
-
   api.addFiles([
     'i18n/en.i18n.json'
   ], ['client', 'server']);
