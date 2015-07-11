@@ -97,7 +97,7 @@
   font-size: 21px;
   height: 25px;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -116,13 +116,15 @@
 }
 
 .post-heading {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   .post-body {
     color: $grey;
     font-size: 14px;
     line-height: 1.2;
-    max-height: 2rem;
-    margin-bottom: 1.25rem;
+    max-height: 1rem;
+    white-space: nowrap;
+    margin-bottom: 1.5rem;
+    text-overflow: ellipsis;
     overflow: hidden;
   }
 }
