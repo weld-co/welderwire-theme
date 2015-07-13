@@ -81,11 +81,7 @@
               <a class="btn btn-secondary display-block margin-b" href="mailto:{{telescope.email}}">Email {{getFirstName}}</a>
             {{/if}}
 
-            {{#if telescope.emailHash}}
-            <span class="profile-background" style="background-image: url(https://www.gravatar.com/avatar/{{telescope.emailHash}}?d={{getSetting "defaultProfileBackground"}})"></span>
-            {{else}}
-            <span class="profile-background" style="background-image: url({{services.twitter.profile_image_url}})"></span>
-            {{/if}}
+            <span class="profile-background" style="background-image: url({{getProfileBackgroundUrl}})"></span>
         </div>
       </div>
 

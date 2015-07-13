@@ -175,6 +175,7 @@ Package.onUse(function (api) {
     'lib/client/templates/calendar/weld_calendar.js',
 
     // Images
+    'lib/client/img/favicon.ico',
     'lib/client/img/weld-logo.png',
     'lib/client/img/weld-logo.svg',
     'lib/client/img/checkbox.svg',
@@ -196,7 +197,6 @@ Package.onUse(function (api) {
     'lib/client/img/resize-handle.svg',
 
     // Favicons
-    'lib/client/img/icons/favicon.ico',
     'lib/client/img/icons/favicon-96x96.png',
     'lib/client/img/icons/favicon-160x160.png',
     'lib/client/img/icons/favicon-192x192.png',
