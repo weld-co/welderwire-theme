@@ -131,7 +131,6 @@ Package.onUse(function (api) {
     'lib/client/templates/posts/custom_posts_list.js',
     'lib/client/templates/posts/custom_single_day_nav.html',
     'lib/client/templates/posts/custom_submit_button.html',
-    'lib/client/templates/posts/weld_dotdotdot.js',
 
     // Post Page
     'lib/client/templates/posts/custom_post_edit.html',
