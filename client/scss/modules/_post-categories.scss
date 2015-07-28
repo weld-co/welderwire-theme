@@ -1,3 +1,17 @@
+.post-categories-container {
+  margin-bottom: 2rem;
+  font-size: smaller;
+}
+
+.post-categories-label {
+  margin-right: 0.5rem;
+}
+
+.post-categories {
+  display: inline-block;
+  margin-left: 0;
+}
+
 .post-category,
 .post-domain,
 .post-closed {
@@ -30,6 +44,7 @@
 
 .post-closed,
 .post-closed:hover {
+  display: inline-block;
   background: darken($primary-color, 15) !important;
   color: $white !important;
   padding: 7px 8px 6px 8px;

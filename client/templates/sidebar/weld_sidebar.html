@@ -1,4 +1,5 @@
 <template name="weld_sidebar">
+  {{#if canView}}
   <nav class="sidebar">
     <div class="close-icon mobile-only">×</div>
     {{#if isDesktop}}{{> logo}}{{/if}}
@@ -12,4 +13,5 @@
       {{/if}}
     </ul>
   </nav>
+  {{/if}}
 </template>

@@ -1,0 +1,18 @@
+<template name="custom_post_content">
+  <a href="{{pathFor 'post_page'}}">
+    {{#if isClosed}}
+      <span class="post-closed">Closed</span>
+    {{/if}}
+
+    {{> post_thumbnail}}
+
+    <div class="post-info">
+      <div class="post-heading">
+        {{> modules "postHeading"}}
+      </div>
+      <div class="post-meta no-wrap scrollable-horizontal no-scrollbar">
+        {{> modules "postMeta"}}
+      </div>
+    </div>
+  </a>
+</template>

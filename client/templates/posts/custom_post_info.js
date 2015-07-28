@@ -10,10 +10,6 @@ Template.post_info.helpers({
     var user = Meteor.user();
     if(!user) return false;
     return _.include(this.commenters, user._id);
-  },
-  authorName: function(){
-    var user = Meteor.users.findOne(this.userId);
-    return Users.getDisplayName(user);
   }
 });
 
@@ -26,7 +22,7 @@ Template.post_info.events({
       Router.go('atSignIn');
       Messages.flash(i18n.t("please_log_in_first"), "info");
     }
-    Meteor.call('upvotePost', post, function(){
+    Meteor.call('upvotePost', post._id, function(){
       Events.track("post upvoted", {'_id': post._id});
     });
   },
@@ -38,7 +34,7 @@ Template.post_info.events({
       Router.go('atSignIn');
       Messages.flash(i18n.t("please_log_in_first"), "info");
     }
-    Meteor.call('cancelUpvotePost', post, function(){
+    Meteor.call('cancelUpvotePost', post._id, function(){
       Events.track("post upvoted cancelled", {'_id': post._id});
     });
   }

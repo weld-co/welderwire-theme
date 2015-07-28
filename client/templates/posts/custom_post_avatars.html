@@ -1,0 +1,15 @@
+<!-- changed to show upvoters instead of commenters, removed .avatar-small -->
+<template name="custom_post_avatars">
+  <a href="{{getProfileUrl userId}}" class="avatar-link avatar-small author-avatar">
+    {{> avatar userId=userId}}
+  </a>
+  {{#if upvoters}}
+    <div class="post-upvoters">
+    {{#each upvoters}}
+      <a href="{{getProfileUrl this}}" class="avatar-link avatar-small upvoter-avatar">
+        {{> avatar userId=this}}
+      </a>
+    {{/each}}
+    </div>
+  {{/if}}
+</template>
