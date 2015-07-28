@@ -10,12 +10,12 @@ Add the theme and any other required packages to your `/.meteor/packages` file. 
 welderwire-theme
 fourseven:scss
 mystor:device-detection
-archive:jquery-dotdotdot
 rzymek:fullcalendar
 cwohlman:pickadate
 mizzao:user-status
 fastclick
-msavin:mongol
 percolate:intercom
 matteodem:easy-search
+force-ssl
+
 ```
