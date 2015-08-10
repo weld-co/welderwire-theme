@@ -19,7 +19,7 @@ Template.weld_members_page.events({
     });
 
     EasySearch.changeProperty('weldMembers', 'sortBy', $(e.target).children(':selected').data('sort'));
-    EasySearch.changeLimit('weldMembers', 10);
+    EasySearch.changeLimit('weldMembers', 100);
 
     instance.paginate(1);
     instance.triggerSearch();

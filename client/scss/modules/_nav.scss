@@ -18,7 +18,7 @@
 a.new-post {
   text-align: center;
   display: block;
-  background-image: url(../img/plus-icon.svg);
+  background-image: url(../../public/plus-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 4rem;
@@ -52,5 +52,5 @@ a.new-post {
   line-height: $mobile-header-height;
   height: $mobile-header-height;
   cursor: pointer;
-  background: url(../img/mobile-navicon.svg) no-repeat left center;
+  background: url(../../public/mobile-navicon.svg) no-repeat left center;
 }

@@ -35,8 +35,8 @@
   color: white;
 }
 
-.post:not(.sticky) .upvote-link.upvoted,
-.single-post .upvote-link.upvoted {
+.post:not(.sticky) .upvoted .upvote,
+.single-post .upvoted .upvote {
   color: $primary-color;
 }
 

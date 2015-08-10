@@ -35,7 +35,7 @@
         color: {{getSetting "accentColor"}};
       }
 
-      .header {
+      .nav {
         background-color: {{getSetting "accentColor"}};
       }
 
@@ -74,8 +74,11 @@
 
       .btn,
       .button {
+        background-color: {{getSetting "accentColor"}};
         color: {{getSetting "accentContrastColor"}} !important;
       }
+
+      .btn-secondary { background-color: inherit; }
 
       .more-button,
       .load-more-days-button {
@@ -100,8 +103,8 @@
 
       /* Upvoted and Commented Icon Colors*/
 
-      .post:not(.sticky) .upvote-link.upvoted,
-      .single-post .upvote-link.upvoted,
+      .post:not(.sticky) .upvoted .upvote,
+      .single-post .upvoted .upvote,
       .post:not(.sticky) .comments-link.commented,
       .single-post .comments-link.commented {
         color: {{getSetting "accentColor"}};

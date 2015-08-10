@@ -1,6 +1,6 @@
 <!-- removed downvote, changed to Likes and reorder items -->
 <template name="custom_comment_item">
-  <li class="comment module comment-displayed" id="{{_id}}">
+  <li class="comment module" id="{{_id}}">
       {{#if isDeleted}}
         {{#if isAdmin}}
           <div class="comment-deleted">This comment has been deleted.</div>
@@ -14,11 +14,11 @@
             {{> avatar userId=userId }}
             </a>
             <div class="comment-meta">
-              <div class="comment-actions">
+              <div class="comment-actions {{#if upvoted}}upvoted{{else}}not-upvoted{{/if}} {{#if downvoted}}downvoted{{else}}not-downvoted{{/if}}">
                 {{#if upvoted}}
-                <a class="upvote-link upvoted" href="#">Liked</a>
+                <a class="upvote upvote-link upvoted" href="#">Liked</a>
                 {{else}}
-                <a class="upvote-link not-upvoted" href="#">Like</a>
+                <a class="upvote upvote-link not-upvoted" href="#">Like</a>
                 {{/if}}
                 <span class="points">{{upvotes}} <span class="unit">{{likesUnitDisplayText}}</span></span>
                 <a href="{{pathFor route='comment_page' _id=_id}}" class="comment-reply goto-comment">{{_ "reply"}}</a>

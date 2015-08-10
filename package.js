@@ -131,6 +131,7 @@ Package.onUse(function (api) {
     'client/templates/posts/custom_posts_list.js',
     'client/templates/posts/custom_single_day_nav.html',
     'client/templates/posts/custom_submit_button.html',
+    'client/templates/posts/custom_post_thumbnail.js',
 
     // Post Page
     'client/templates/posts/custom_post_edit.html',

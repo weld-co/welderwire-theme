@@ -14,7 +14,7 @@ Template.post_info.helpers({
 });
 
 Template.post_info.events({
-  'click .upvote-link.not-upvoted': function(e, instance){
+  'click .not-upvoted .upvote': function(e, instance){
     var post = this;
     e.preventDefault();
     e.stopPropagation();
@@ -26,7 +26,7 @@ Template.post_info.events({
       Events.track("post upvoted", {'_id': post._id});
     });
   },
-  'click .upvote-link.upvoted': function(e, instance){
+  'click .upvoted .upvote': function(e, instance){
     var post = this;
     e.preventDefault();
     e.stopPropagation();

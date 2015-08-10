@@ -25,7 +25,7 @@
         <span class="post-closed">Closed</span>
       {{/if}}
 
-      <span class="post-title">{{title}}</span>
+      <a href="{{pathFor 'post_page'}}" class="post-title">{{title}}</a>
       <a class="post-author" href="{{getProfileUrl userId}}">by {{getAuthorName}}</a>
       {{#if canEdit this}}
         <a class="button margin-t display-inline-block" href="{{pathFor route='post_edit' _id=_id}}">

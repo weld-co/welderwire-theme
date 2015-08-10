@@ -137,7 +137,7 @@ textarea {
   resize: vertical;
   position: relative;
   -webkit-overflow-scrolling: touch;
-  background: white url(../img/resize-handle.svg) no-repeat bottom right;
+  background: white url(../../public/resize-handle.svg) no-repeat bottom right;
 }
 
 textarea + .help-block:after {
@@ -204,7 +204,7 @@ select,
   width: 100%;
   text-transform: capitalize;
   font-family: $base-font-family;
-  background: white url(../img/updown-icon.svg) no-repeat right 10px center;
+  background: white url(../../public/updown-icon.svg) no-repeat right 10px center;
 
   &:focus {
     outline: none;
@@ -368,7 +368,7 @@ label.checkbox-inline {
 .checkbox input,
 .checkbox-inline input {
   -webkit-appearance: none;
-  background: url(../img/checkbox.svg) center no-repeat;
+  background: url(../../public/checkbox.svg) center no-repeat;
   background-size: 22px;
   border: none;
   height: 25px;
@@ -380,7 +380,7 @@ label.checkbox-inline {
   vertical-align: middle;
   &:checked {
     animation: scaleUp 200ms cubic-bezier(0.5, -1, 0.25, 2);
-    background-image: url(../img/checkbox-checked.svg);
+    background-image: url(../../public/checkbox-checked.svg);
   }
 }
 
@@ -448,8 +448,8 @@ input[type="radio"] {
 
 
 input[type="radio"] {
-  background-image: url(../img/radio.svg);
+  background-image: url(../../public/radio.svg);
   &:checked {
-    background-image: url(../img/radio-checked.svg);
+    background-image: url(../../public/radio-checked.svg);
   }
 }
