@@ -1,11 +1,11 @@
 <template name="weld_calendar_dallas">
-  {{> weld_calendar_modal city="dallas"}}
+  {{> weld_calendar_modal city="dallas" staffer="elisa"}}
   <div class="calendar-legend"><span class="studio-color">Studio</span><span class="meeting-room-color">Meeting Room</span></div>
   {{> fullcalendar options}}
 </template>
 
 <template name="weld_calendar_nashville">
-  {{> weld_calendar_modal city="nashville"}}
+  {{> weld_calendar_modal city="nashville" staffer="lindsey"}}
   <div class="calendar-legend"><span class="studio-color">Studio</span><span class="meeting-room-color">Meeting Room</span></div>
   {{> fullcalendar options}}
 </template>
@@ -62,7 +62,7 @@
     </form>
 
     <!-- Edit Event Form -->
-    <form class="edit-event-form" action="https://formspree.io/{{city}}@weld.co" method="POST">
+    <form class="edit-event-form" action="https://formspree.io/{{staffer}}@weld.co" method="POST">
       <div class="close-button">✕</div>
       <input type="hidden" name="_subject" value="Calendar Change Request"/>
 

@@ -51,8 +51,8 @@
   margin-bottom: 1rem;
 }
 
-.category-nashville,
-.category-dallas {
+.post-category.category-nashville,
+.post-category.category-dallas {
   background: $primary-color;
   color: white;
 }
@@ -60,8 +60,8 @@
 .posts.list .post:hover {
   .post-category,
   .post-domain,
-  .category-nashville,
-  .category-dallas {
+  .post-category.category-nashville,
+  .post-category.category-dallas {
     @include large {
       background: white;
       color: $dark-grey;

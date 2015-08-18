@@ -393,27 +393,27 @@ label.checkbox-inline {
 
 // Customized version of autoform Checkboxes
 
-.categories-menu .menu-contents {
+.category-input .menu-contents {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
 }
 
-.categories-menu .menu-item {
+.category-input .menu-item {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   display: flex;
   padding: 0;
 }
 
-.categories-menu .menu-item label {
+.category-input .menu-item label {
   display: flex;
   align-items: center;
   padding: 1rem;
   background: $lightest-grey;
 }
 
-.categories-menu .menu-item input {
+.category-input .menu-item input {
   -webkit-appearance: none;
   background: url(../../public/checkbox.svg) center no-repeat;
   background-size: 22px;
