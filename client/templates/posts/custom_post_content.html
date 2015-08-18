@@ -1,5 +1,5 @@
 <template name="custom_post_content">
-  <a href="{{pathFor 'post_page'}}">
+  <a href="{{this.getPageUrl}}">
     {{#if isClosed}}
       <span class="post-closed">Closed</span>
     {{/if}}

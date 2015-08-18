@@ -338,8 +338,6 @@ option[disabled] {
     animation: scaleUp 200ms cubic-bezier(0.5, -0.75, 0.25, 1.5);
 }
 
-// Customized version of autoform Checkboxes
-
 .af-checkbox-group {
   display: flex;
   flex-flow: row wrap;
@@ -391,6 +389,46 @@ label.checkbox-inline {
   margin-bottom: 0.5rem;
   display: inline-block;
   color: $primary-color;
+}
+
+// Customized version of autoform Checkboxes
+
+.categories-menu .menu-contents {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.categories-menu .menu-item {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  padding: 0;
+}
+
+.categories-menu .menu-item label {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: $lightest-grey;
+}
+
+.categories-menu .menu-item input {
+  -webkit-appearance: none;
+  background: url(../../public/checkbox.svg) center no-repeat;
+  background-size: 22px;
+  border: none;
+  height: 25px;
+  width: 25px;
+  margin-right: 0.25rem;
+  margin-top: -0.35rem;
+  outline: none;
+  overflow: visible;
+  vertical-align: middle;
+  &:checked {
+    animation: scaleUp 200ms cubic-bezier(0.5, -1, 0.25, 2);
+    background-image: url(../../public/checkbox-checked.svg);
+  }
 }
 
 /*====================================================

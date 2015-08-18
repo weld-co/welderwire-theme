@@ -9,6 +9,7 @@ $banner-height: 40px;
   z-index: 5000;
   // Style
   font: 400 0.875rem "Avenir Next";
+  text-align: center;
   height: $banner-height;
   line-height: $banner-height;
   background: lighten($lightest-grey, 4);

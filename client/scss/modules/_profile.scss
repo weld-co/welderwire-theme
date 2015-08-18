@@ -87,6 +87,19 @@ $profile-header-height: 25vw;
   position: relative;
 }
 
+.user-complete {
+  padding: 1rem;
+  max-width: 400px;
+  margin: 25% auto;
+}
+
+.finish-signup-message {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
 .profile-header-wrap .avatar {
   height: 125px;
   width: 125px;

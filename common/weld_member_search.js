@@ -2,7 +2,7 @@ Meteor.startup(function () {
   EasySearch.createSearchIndex('weldMembers', {
     'field': ['createdAt', 'telescope.displayName', 'telescope.email', 'telescope.location', 'telescope.bio', 'telescope.skill1', 'telescope.skill2', 'telescope.skill3'],
     'collection': Meteor.users,
-    'limit': 50,
+    'limit': 100,
     'props': {
       'filteredCategory': 'All',
       'sortBy': 'name'

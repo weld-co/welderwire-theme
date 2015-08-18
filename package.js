@@ -147,6 +147,7 @@ Package.onUse(function (api) {
 
     // Profile
     'client/templates/profile/custom_user_info.html',
+    'client/templates/profile/custom_user_complete.html',
     'client/templates/profile/custom_user_info.js',
     'client/templates/profile/user_account_patch.js',
     'client/templates/profile/instafeed.min.js',
