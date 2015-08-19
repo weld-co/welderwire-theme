@@ -24,6 +24,7 @@ Template.weld_calendar_dallas.helpers({
         element.attr('href', 'javascript:void(0);');
       },
       theme: true,
+      height: "auto",
       header: {
         left: 'title',
         right: 'today prev,next month,agendaWeek'
@@ -62,6 +63,7 @@ Template.weld_calendar_nashville.helpers({
         element.attr('href', 'javascript:void(0);');
       },
       theme: true,
+      height: "auto",
       header: {
         left: 'title',
         right: 'today prev,next month,agendaWeek'
