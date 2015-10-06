@@ -35,6 +35,14 @@
         color: {{getSetting "accentColor"}};
       }
 
+      .notification-timestamp {
+        color: {{getSetting "accentColor"}};
+      }
+
+      .notification-icon {
+        fill: {{getSetting "accentColor"}};
+      }
+
       .nav {
         background-color: {{getSetting "accentColor"}};
       }
@@ -169,7 +177,8 @@
         border-color: {{getSetting "accentColor"}};
       }
 
-      .checkbox input:checked {
+      .checkbox input:checked,
+      .category-input .menu-item input:checked {
         background-image: url({{getSetting "checkboxImage"}})
       }
 

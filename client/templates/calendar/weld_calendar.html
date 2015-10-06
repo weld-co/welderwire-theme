@@ -5,8 +5,8 @@
 </template>
 
 <template name="weld_calendar_nashville">
-  {{> weld_calendar_modal city="nashville" staffer="lindsey"}}
-  <div class="calendar-legend"><span class="studio-color">Studio</span><span class="meeting-room-color">Meeting Room</span></div>
+  {{> weld_calendar_modal city="nashville" staffer="lindsey" podcast="true"}}
+  <div class="calendar-legend"><span class="studio-color">Studio</span><span class="meeting-room-color">Meeting Room</span><span class="podcast-room-color">Podcast Room</span></div>
   {{> fullcalendar options}}
 </template>
 
@@ -28,6 +28,12 @@
             <input class="input" type="radio" id="meeting" name="space" value="meeting-room"/>
             <label class="radio-label" for="meeting">Meeting Room</label>
           </span>
+          {{#if podcast}}
+          <span class="radio-wrap">
+            <input class="input" type="radio" id="podcast" name="space" value="podcast-room"/>
+            <label class="radio-label" for="podcast">Podcast Room</label>
+          </span>
+          {{/if}}
         </fieldset>
       </div>
 
@@ -39,7 +45,7 @@
 
       <div class="control-group">
         <label>Date</label>
-        <input type="text" class="date" name="date" required/>
+        <input type="text" class="datepicker" name="date" required/>
       </div>
 
       <div class="group-wrap row">

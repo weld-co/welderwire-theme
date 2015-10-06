@@ -43,7 +43,8 @@ Template.weld_calendar_nashville.helpers({
       googleCalendarApiKey: Meteor.settings.public.googleCalenderApiKey,
       eventSources: [
         { googleCalendarId: Meteor.settings.public.nashvilleCalendar.studio },
-        { googleCalendarId: Meteor.settings.public.nashvilleCalendar.meeting, className: 'meeting-room'}
+        { googleCalendarId: Meteor.settings.public.nashvilleCalendar.meeting, className: 'meeting-room'},
+        { googleCalendarId: Meteor.settings.public.nashvilleCalendar.podcast, className: 'podcast-room'}
       ],
       dayClick: function (date, jsEvent, view) {
         $('html, body, .content').scrollTop(0).scrollLeft(0);
@@ -102,16 +103,16 @@ Template.weld_calendar_modal.events({
     }).done(function(data) {
       submitButton.attr('disabled', false);
       // If Studio Booking, show studio message
-      if (formEl.find('[value=studio]').is(':checked')) {
+      if (formEl.find('#studio').is(':checked')) {
         $('.modal').toggleClass('new-event studio-event-submitted');
       }
       // If Meeting Booking, show meeting message
-      if (formEl.find('[value=meeting-room]').is(':checked')) {
+      if (formEl.find('#meeting').is(':checked')) {
         $('.modal').toggleClass('new-event meeting-event-submitted');
       }
-      // If Editing Booking, show edit message
-      if (formEl.is(this)) {
-        $('.modal').toggleClass('edit-event edit-event-submitted');
+      // If Podcast Room, show meeting message
+      if (formEl.find('#podcast').is(':checked')) {
+        $('.modal').toggleClass('new-event studio-event-submitted');
       }
     });
   },
@@ -135,7 +136,7 @@ Template.weld_calendar_modal.events({
   },
 
   // Enable submit button after selecting space to reserve
-  'change [value=meeting-room], change [value=studio]': function(e) {
+  'change #studio, change #meeting, change #podcast': function(e) {
     $('input[type=submit]').attr('disabled', false);
   },
 

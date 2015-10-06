@@ -24,7 +24,9 @@
       <option data-sort="oldest">Oldest Members</option>
     </select>
     {{#esEach index="weldMembers"}}
-      {{> weld_members_item}}
+      {{#if isInvited}}
+        {{> weld_members_item}}
+      {{/if}}
     {{/esEach}}
   </div>
 

@@ -60,16 +60,24 @@
     color: white;
     position: absolute;
     top: 28px;
-    left: 300px;
+    left: 280px;
     white-space: nowrap;
-    > *:first-child {
+    > *:not(:last-child) {
       margin-right: 20px;
     }
   }
 
+//====================================================
+//  Legend
+//====================================================
+
+  $studio: $primary-color;
+  $meeting: $blue;
+  $podcast: $yellow;
 
   .studio-color:before,
-  .meeting-room-color:before {
+  .meeting-room-color:before,
+  .podcast-room-color:before {
     content: '';
     display: inline-block;
     height: 12px;
@@ -79,11 +87,15 @@
   }
 
   .studio-color:before {
-    background: $primary-color;
+    background: $studio;
   }
 
   .meeting-room-color:before {
-    background: $blue;
+    background: $meeting;
+  }
+
+  .podcast-room-color:before {
+    background: $podcast;
   }
 
   .fc-center,
@@ -228,12 +240,16 @@
   .fc-event {
     border-radius: 0;
     border: 0;
-    background: $primary-color;
+    background: $studio;
     padding: 2px;
   }
 
   .meeting-room {
-    background: $blue;
+    background: $meeting;
+  }
+
+  .podcast-room {
+    background: $podcast;
   }
 }
 
